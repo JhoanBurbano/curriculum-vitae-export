@@ -1,0 +1,141 @@
+{
+  "header": {
+    "subtitle": "AI Product Engineer | Prompt Engineer | Multi-Agent Systems | Fintech",
+    "nameLine1": "JHOAN",
+    "nameLine2": "BURBANO",
+    "image": "/photo.png",
+    "contactLine": "Colombia | jsburbano.framer.website | joans.burbano@gmail.com | linkedin.com/in/jsburbano",
+    "contactLinks": [
+      { "label": "jsburbano.framer.website", "url": "https://jsburbano.framer.website" },
+      { "label": "joans.burbano@gmail.com", "url": "mailto:joans.burbano@gmail.com" },
+      { "label": "linkedin.com/in/jsburbano", "url": "https://linkedin.com/in/jsburbano" }
+    ]
+  },
+
+  "professionalSummary": "AI Product Engineer with 8+ years of experience building real-world products across mobile, frontend, and backend systems. Specialized in prompt engineering, multi-agent orchestration, and AI-powered product execution. Strong fintech background integrating payment systems and handling transactional flows in production. Focused on turning AI capabilities into scalable, reliable, and production-ready systems.",
+
+  "coreSkills": [
+    {
+      "category": "AI & Prompt Engineering",
+      "items": [
+        "Prompt Engineering",
+        "Multi-Agent Systems",
+        "Context Engineering",
+        "LLM Workflows",
+        "AI-assisted Development",
+        "Code Generation",
+        "Refactoring Automation",
+        "AI Product Workflows"
+      ]
+    },
+    {
+      "category": "AI Stack",
+      "items": [
+        "OpenAI",
+        "Claude",
+        "Gemini",
+        "Cursor",
+        "Windsurf",
+        "Framer AI",
+        "Figma Make",
+        "Midjourney",
+        "Firefly"
+      ]
+    },
+    {
+      "category": "Fintech",
+      "items": [
+        "Stripe",
+        "MercadoPago",
+        "Wompi",
+        "PayU",
+        "Kushki",
+        "Payválida",
+        "Conekta",
+        "Checkout Flows",
+        "Transaction Validation",
+        "Payment Systems"
+      ]
+    },
+    {
+      "category": "Engineering",
+      "items": [
+        "React",
+        "React Native",
+        "Next.js",
+        "Node.js",
+        "TypeScript",
+        "Firebase",
+        "CI/CD",
+        "Clean Architecture"
+      ]
+    }
+  ],
+
+  "tools": [
+    {
+      "category": "AI Agents & Dev",
+      "items": ["Cursor", "Claude Code", "ChatGPT", "Gemini"]
+    },
+    {
+      "category": "GenAI Creative",
+      "items": ["Midjourney", "Firefly"]
+    },
+    {
+      "category": "Payment Gateways",
+      "items": ["Stripe", "MercadoPago", "Kushki", "Conekta"]
+    },
+    {
+      "category": "Testing",
+      "items": ["Jest", "React Testing Library", "Cypress", "Playwright"]
+    },
+    {
+      "category": "CI/CD",
+      "items": ["GitHub Actions", "Bitbucket Pipelines", "CircleCI"]
+    }
+  ],
+
+  "experience": [
+    {
+      "role": "Senior Mobile Engineer (Team Lead)",
+      "company": "Cheaf",
+      "period": "2024 - Present",
+      "description": "Led development of mobile applications handling real transactional flows (checkout, delivery, validation). Applied AI-assisted workflows to accelerate development, refactoring, and feature delivery. Improved onboarding performance and reduced friction in critical flows. Increased reliability through better error handling and system design."
+    },
+    {
+      "role": "Mobile Engineer",
+      "company": "Teamcore",
+      "period": "2024 - 2025",
+      "description": "Developed mobile applications for data-driven operational systems. Worked with real-world execution workflows and performance-critical features. Used AI tools for code generation, refactoring, documentation, and faster iteration cycles. Focused on scalability, performance, and production reliability."
+    },
+    {
+      "role": "Senior Software Developer (Tech Lead)",
+      "company": "Somos Inmobiliarios",
+      "period": "2025",
+      "description": "Led development of a scalable platform with strong product orientation. Designed and implemented features for sales, learning, and growth. Applied AI-assisted workflows to modularize systems, accelerate execution, and generate documentation. Contributed to product and technical decision-making."
+    },
+    {
+      "role": "Frontend Engineer (Fintech)",
+      "company": "Aplazo",
+      "period": "2022 - 2023",
+      "description": "Owned and maintained payment and risk flows in a fintech environment. Implemented transaction validation logic and financial systems. Refactored critical modules aligned with evolving payment requirements. Focused on reliability and edge-case handling in financial products."
+    }
+  ],
+
+  "education": [
+    "Systems Engineering — Universidad ICESI",
+    "Full Stack Developer — Henry",
+    "Public Accounting (in progress) — UNAD"
+  ],
+
+  "languages": [
+    { "name": "Spanish", "level": "Native" },
+    { "name": "English", "level": "Intermediate (working towards C1)" }
+  ],
+
+  "footerLinks": [
+    { "label": "Portfolio", "url": "https://jsburbano.framer.website" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/jsburbano" },
+    { "label": "GitHub", "url": "https://github.com/jsburbano" }
+  ]
+}
