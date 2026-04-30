@@ -1,6 +1,6 @@
 {
   "header": {
-    "subtitle": "AI Product Engineer | Prompt Engineer | Multi-Agent Systems | Fintech",
+    "subtitle": "Senior Frontend Engineer (React / Next.js) | Admin Platforms | Data-heavy UI",
     "nameLine1": "JHOAN",
     "nameLine2": "BURBANO",
     "image": "/photo.png",
@@ -12,34 +12,45 @@
     ]
   },
 
-  "professionalSummary": "AI Product Engineer with 8+ years of experience building real-world products across mobile, frontend, and backend systems. Specialized in prompt engineering, multi-agent orchestration, and AI-powered product execution. Strong fintech background integrating payment systems and handling transactional flows in production. Focused on turning AI capabilities into scalable, reliable, and production-ready systems.",
+  "professionalSummary": "Senior Frontend Engineer with 8+ years building scalable, data-driven web and mobile applications. Expert in React and Next.js, focused on admin platforms, dashboards, and configuration-heavy interfaces. Proven in designing modular architectures handling complex business logic, transactional flows, reporting, and operational tooling. Background in fintech building reliable systems with advanced API integrations, plus experience leveraging AI-assisted workflows to accelerate delivery and engineering efficiency.",
 
   "coreSkills": [
     {
-      "category": "AI & Prompt Engineering",
+      "category": "Frontend & UI Engineering",
       "items": [
-        "Prompt Engineering",
-        "Multi-Agent Systems",
-        "Context Engineering",
-        "LLM Workflows",
-        "AI-assisted Development",
-        "Code Generation",
-        "Refactoring Automation",
-        "AI Product Workflows"
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Component Architecture",
+        "State Management",
+        "Performance Optimization",
+        "Responsive Design",
+        "Accessibility"
       ]
     },
     {
-      "category": "AI Stack",
+      "category": "Admin Platforms & Data UI",
       "items": [
-        "OpenAI",
-        "Claude",
-        "Gemini",
-        "Cursor",
-        "Windsurf",
-        "Framer AI",
-        "Figma Make",
-        "Midjourney",
-        "Firefly"
+        "Dashboards",
+        "Data Tables (sorting, filtering, pagination)",
+        "Form-heavy Interfaces",
+        "Configuration Panels",
+        "Role-based UI",
+        "Data Visualization",
+        "Reporting",
+        "CSV Export"
+      ]
+    },
+    {
+      "category": "Backend & APIs",
+      "items": [
+        "Python",
+        "Node.js",
+        "REST APIs",
+        "Microservices",
+        "Data Processing",
+        "Auth (AuthN/AuthZ)",
+        "Third-party Integrations"
       ]
     },
     {
@@ -58,16 +69,14 @@
       ]
     },
     {
-      "category": "Engineering",
+      "category": "AI Engineering",
       "items": [
-        "React",
-        "React Native",
-        "Next.js",
-        "Node.js",
-        "TypeScript",
-        "Firebase",
-        "CI/CD",
-        "Clean Architecture"
+        "Prompt Engineering",
+        "Multi-Agent Systems",
+        "LLM Workflows",
+        "AI-assisted Development",
+        "Code Generation",
+        "Refactoring Automation"
       ]
     }
   ],
@@ -78,16 +87,16 @@
       "items": ["Cursor", "Claude Code", "ChatGPT", "Gemini"]
     },
     {
-      "category": "GenAI Creative",
-      "items": ["Midjourney", "Firefly"]
+      "category": "Testing",
+      "items": ["Jest", "Cypress", "Playwright"]
+    },
+    {
+      "category": "Frontend & UI",
+      "items": ["Tailwind CSS", "Recharts", "Forms"]
     },
     {
       "category": "Payment Gateways",
       "items": ["Stripe", "MercadoPago", "Kushki", "Conekta"]
-    },
-    {
-      "category": "Testing",
-      "items": ["Jest", "React Testing Library", "Cypress", "Playwright"]
     },
     {
       "category": "CI/CD",
@@ -100,25 +109,25 @@
       "role": "Senior Mobile Engineer (Team Lead)",
       "company": "Cheaf",
       "period": "2024 - Present",
-      "description": "Led development of mobile applications handling real transactional flows (checkout, delivery, validation). Applied AI-assisted workflows to accelerate development, refactoring, and feature delivery. Improved onboarding performance and reduced friction in critical flows. Increased reliability through better error handling and system design."
+      "description": "Led development of data-driven frontend and mobile applications handling transactional flows. Designed scalable UI architectures for complex API-driven workflows and business-critical operations. Built and optimized data-heavy interfaces, including dashboards and configuration flows, improving performance and reliability while driving architectural decisions and delivery with AI-assisted workflows."
     },
     {
       "role": "Mobile Engineer",
       "company": "Teamcore",
       "period": "2024 - 2025",
-      "description": "Developed mobile applications for data-driven operational systems. Worked with real-world execution workflows and performance-critical features. Used AI tools for code generation, refactoring, documentation, and faster iteration cycles. Focused on scalability, performance, and production reliability."
+      "description": "Developed cross-platform applications focused on data-driven UI and backend integration. Built scalable frontend layers consuming APIs and handling complex state, improving performance through reusable components and structured architecture, leveraging AI tools to accelerate delivery."
     },
     {
       "role": "Senior Software Developer (Tech Lead)",
       "company": "Somos Inmobiliarios",
       "period": "2025",
-      "description": "Led development of a scalable platform with strong product orientation. Designed and implemented features for sales, learning, and growth. Applied AI-assisted workflows to modularize systems, accelerate execution, and generate documentation. Contributed to product and technical decision-making."
+      "description": "Led development of a scalable platform focusing on frontend architecture and business logic. Designed modular UI systems and configuration-driven interfaces for complex workflows, improving efficiency and delivery through structured engineering practices and AI-assisted development."
     },
     {
-      "role": "Frontend Engineer (Fintech)",
+      "role": "Software Engineer (Fintech)",
       "company": "Aplazo",
       "period": "2022 - 2023",
-      "description": "Owned and maintained payment and risk flows in a fintech environment. Implemented transaction validation logic and financial systems. Refactored critical modules aligned with evolving payment requirements. Focused on reliability and edge-case handling in financial products."
+      "description": "Worked on financial systems focused on transactional flows and API integrations. Built reliable data-driven interfaces for payment and validation processes, ensuring scalability and correctness in complex operations."
     }
   ],
 
