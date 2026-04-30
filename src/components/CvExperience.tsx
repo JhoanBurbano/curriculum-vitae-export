@@ -8,7 +8,7 @@ interface CvExperienceProps {
 export function CvExperience({ items }: CvExperienceProps) {
   return (
     <section className="cv-section">
-      <CvSectionTitle title="PROFESSIONAL EXPERIENCE" />
+      <CvSectionTitle title="LAST PROFESSIONAL EXPERIENCE" />
       <ul className="cv-experience-list">
         {items.map((item, i) => (
           <li key={i} className="cv-experience-item">
