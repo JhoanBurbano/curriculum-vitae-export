@@ -1,6 +1,6 @@
 {
   "header": {
-    "subtitle": "AI Product Engineer | Prompt Engineer | Multi-Agent Systems | Fintech",
+    "subtitle": "Senior AI Product Engineer (Fullstack) | React/Next.js | Node.js | Google Cloud | Firebase | AI Agents",
     "nameLine1": "JHOAN",
     "nameLine2": "BURBANO",
     "image": "/photo.png",
@@ -12,19 +12,19 @@
     ]
   },
 
-  "professionalSummary": "AI Product Engineer with 8+ years of experience building real-world products across mobile, frontend, and backend systems. Specialized in prompt engineering, multi-agent orchestration, and AI-powered product execution. Strong fintech background integrating payment systems and handling transactional flows in production. Focused on turning AI capabilities into scalable, reliable, and production-ready systems.",
+  "professionalSummary": "Senior AI Product Engineer with 8+ years of experience building production-ready web, mobile, and backend systems. Strong fullstack background with React, Next.js, React Native, Node.js, TypeScript, Firebase, and Google Cloud. Experienced in building and integrating APIs, backend services, business logic, workflows, payment systems, and AI-powered features. Focused on shipping real product value through scalable architecture, reliable backend integrations, conversational AI, LLM workflows, and context-aware user experiences.",
 
   "coreSkills": [
     {
       "category": "AI & Prompt Engineering",
       "items": [
         "Prompt Engineering",
-        "Multi-Agent Systems",
-        "Context Engineering",
-        "LLM Workflows",
+        "AI Agents",
+        "Conversational AI",
+        "LLM Integrations",
+        "Context-Aware Workflows",
+        "RAG",
         "AI-assisted Development",
-        "Code Generation",
-        "Refactoring Automation",
         "AI Product Workflows"
       ]
     },
@@ -34,12 +34,12 @@
         "OpenAI",
         "Claude",
         "Gemini",
+        "LangChain",
+        "Pinecone",
+        "MCP",
+        "n8n",
         "Cursor",
-        "Windsurf",
-        "Framer AI",
-        "Figma Make",
-        "Midjourney",
-        "Firefly"
+        "Claude Code"
       ]
     },
     {
@@ -66,8 +66,8 @@
         "Node.js",
         "TypeScript",
         "Firebase",
-        "CI/CD",
-        "Clean Architecture"
+        "Google Cloud",
+        "Backend/API Integrations"
       ]
     }
   ],
@@ -79,7 +79,7 @@
     },
     {
       "category": "GenAI Creative",
-      "items": ["Midjourney", "Firefly"]
+      "items": ["n8n", "LangChain", "OpenAI", "Claude"]
     },
     {
       "category": "Payment Gateways",
@@ -100,25 +100,25 @@
       "role": "Senior Mobile Engineer (Team Lead)",
       "company": "Cheaf",
       "period": "2024 - Present",
-      "description": "Led development of mobile applications handling real transactional flows (checkout, delivery, validation). Applied AI-assisted workflows to accelerate development, refactoring, and feature delivery. Improved onboarding performance and reduced friction in critical flows. Increased reliability through better error handling and system design."
+      "description": "Led mobile apps for real transactional flows: checkout, delivery, order validation, and ops. Firebase, GCP logging, API integrations, and production monitoring. AI-assisted workflows for faster delivery; improved reliability with stronger error handling, scalable architecture, and solid business logic."
     },
     {
       "role": "Mobile Engineer",
       "company": "Teamcore",
       "period": "2024 - 2025",
-      "description": "Developed mobile applications for data-driven operational systems. Worked with real-world execution workflows and performance-critical features. Used AI tools for code generation, refactoring, documentation, and faster iteration cycles. Focused on scalability, performance, and production reliability."
+      "description": "Built mobile apps for data-driven ops: API integrations, performance-critical features, and production workflows. Used AI tools to speed up implementation, refactors, and docs. Emphasis on clean architecture, reliability, and maintainability."
     },
     {
       "role": "Senior Software Developer (Tech Lead)",
       "company": "Somos Inmobiliarios",
       "period": "2025",
-      "description": "Led development of a scalable platform with strong product orientation. Designed and implemented features for sales, learning, and growth. Applied AI-assisted workflows to modularize systems, accelerate execution, and generate documentation. Contributed to product and technical decision-making."
+      "description": "Tech lead on a scalable fullstack platform: APIs, backend services, cross-tool workflows, business logic, and frontend. AI-assisted and low-code patterns to ship faster and modularize the stack. Shaped architecture, product direction, and integration strategy."
     },
     {
       "role": "Frontend Engineer (Fintech)",
       "company": "Aplazo",
       "period": "2022 - 2023",
-      "description": "Owned and maintained payment and risk flows in a fintech environment. Implemented transaction validation logic and financial systems. Refactored critical modules aligned with evolving payment requirements. Focused on reliability and edge-case handling in financial products."
+      "description": "Owned payment, checkout, and risk flows: API integration, transaction validation, and production edge cases. Refactored critical modules as payment and business rules evolved. Prioritized reliability, scalability, and clear UX in financial products."
     }
   ],
 
