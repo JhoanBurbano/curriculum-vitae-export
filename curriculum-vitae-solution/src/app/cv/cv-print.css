@@ -1,0 +1,325 @@
+/* CV: mismos tokens y layout que portfolio-export (App.css), acotado a .cv-print-scope */
+
+:root {
+  --cv-bg: #121212;
+  --cv-accent: #e0f11f;
+  --cv-text: rgba(240, 240, 240, 0.9);
+  --cv-text-muted: rgba(240, 240, 240, 0.6);
+  --cv-card-bg: rgba(240, 240, 240, 0.1);
+  --cv-card-border: rgba(240, 240, 240, 0.2);
+  --cv-line: rgba(240, 240, 240, 0.3);
+  --font-hero: "Big Shoulders Display", Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.cv-print-scope,
+.cv-print-scope *,
+.cv-print-scope *::before,
+.cv-print-scope *::after {
+  box-sizing: border-box;
+}
+
+.cv-print-scope {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--cv-text);
+  background: radial-gradient(ellipse at top, #0b0b0b 0%, var(--cv-bg) 60%, #0a0a0a 100%);
+  min-height: 100vh;
+}
+
+.cv-print-scope .cv-page-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 26px 28px 32px;
+}
+
+.cv-print-scope .cv-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cv-print-scope .cv-header-subtitle {
+  margin: 0 0 8px;
+  font-size: 11px;
+  color: var(--cv-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.cv-print-scope .cv-header-name-block {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.cv-print-scope .cv-header-name {
+  margin: 0;
+  font-size: clamp(4.8rem, 12vw, 7.4rem);
+  font-family: var(--font-hero);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 0.86;
+  color: var(--cv-accent);
+  text-transform: uppercase;
+}
+
+.cv-print-scope .cv-header-name-line1,
+.cv-print-scope .cv-header-name-line2 {
+  display: block;
+  letter-spacing: inherit;
+}
+
+.cv-print-scope .cv-header-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 108px;
+  height: 140px;
+  border-radius: 9999px;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
+}
+
+.cv-print-scope .cv-header-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
+  transform: scale(1.28);
+  transform-origin: 50% 25%;
+}
+
+.cv-print-scope .cv-header-contact {
+  margin: 0;
+  font-size: 11px;
+  color: var(--cv-text-muted);
+}
+
+.cv-print-scope .cv-header-contact a {
+  font-family: var(--font-hero);
+  color: var(--cv-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  letter-spacing: 0.04em;
+}
+
+.cv-print-scope .cv-header-contact a:hover {
+  text-decoration: underline;
+}
+
+.cv-print-scope .cv-section {
+  margin-bottom: 20px;
+}
+
+.cv-print-scope .cv-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--cv-accent);
+  text-transform: uppercase;
+}
+
+.cv-print-scope .cv-section-title-line {
+  flex: 1;
+  max-width: 180px;
+  height: 2px;
+  background: var(--cv-line);
+}
+
+.cv-print-scope .cv-summary-text {
+  margin: 0;
+  font-size: 13px;
+  color: var(--cv-text-muted);
+  line-height: 1.55;
+}
+
+.cv-print-scope .cv-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cv-print-scope .cv-skill-box {
+  background: var(--cv-card-bg);
+  border: 1px solid var(--cv-card-border);
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+.cv-print-scope .cv-skill-box-full {
+  grid-column: 1 / -1;
+}
+
+.cv-print-scope .cv-skill-box-title {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  color: rgba(240, 240, 240, 0.92);
+  margin-bottom: 6px;
+}
+
+.cv-print-scope .cv-skill-box-items {
+  font-size: 11px;
+  color: var(--cv-text-muted);
+  line-height: 1.4;
+}
+
+.cv-print-scope .cv-experience-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-print-scope .cv-experience-item {
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cv-print-scope .cv-experience-item:last-child {
+  border-bottom: none;
+}
+
+.cv-print-scope .cv-experience-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.cv-print-scope .cv-experience-role {
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(240, 240, 240, 0.92);
+}
+
+.cv-print-scope .cv-experience-role a {
+  color: var(--cv-accent);
+  text-decoration: none;
+}
+
+.cv-print-scope .cv-experience-role a:hover {
+  text-decoration: underline;
+}
+
+.cv-print-scope .cv-experience-period {
+  font-size: 12px;
+  color: var(--cv-text-muted);
+  white-space: nowrap;
+}
+
+.cv-print-scope .cv-experience-desc {
+  margin: 0;
+  font-size: 12px;
+  color: var(--cv-text-muted);
+  line-height: 1.5;
+}
+
+.cv-print-scope .cv-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--cv-line);
+}
+
+.cv-print-scope .cv-footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.cv-print-scope .cv-footer-link-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cv-print-scope .cv-footer-link {
+  font-family: var(--font-hero);
+  color: var(--cv-accent);
+  font-weight: 700;
+  font-size: 60px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cv-print-scope .cv-footer-link:hover {
+  filter: brightness(1.15);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.cv-print-scope .cv-footer-sep {
+  color: var(--cv-accent);
+  font-size: 14px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cv-print-scope .cv-footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.cv-print-scope .cv-footer-subtitle {
+  display: block;
+  font-weight: 700;
+  font-size: 11px;
+  color: #fff;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cv-print-scope .cv-footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: var(--cv-text);
+}
+
+.cv-print-scope .cv-footer-list li {
+  margin-bottom: 2px;
+}
+
+@media print {
+  body {
+    background: var(--cv-bg) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .cv-print-scope .cv-page-wrap {
+    padding: 10mm 12mm;
+    max-width: none;
+  }
+
+  .cv-print-scope .cv-page-wrap,
+  .cv-print-scope .cv-page-wrap * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv-print-scope a[href] {
+    text-decoration: underline;
+  }
+}

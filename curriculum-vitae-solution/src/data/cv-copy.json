@@ -1,0 +1,455 @@
+{
+  "seo": {
+    "title": "Jhoan Burbano — AI Product Engineer & Mobile",
+    "description": "AI Product Engineer con 8+ años en producto real: mobile, frontend, backend, fintech y orquestación multi-agente. Portafolio, servicios y CV exportable.",
+    "siteUrl": "https://jsburbano.framer.website",
+    "locale": "es_CO",
+    "keywords": [
+      "AI Product Engineer",
+      "React Native",
+      "Next.js",
+      "Fintech",
+      "Prompt Engineering",
+      "Colombia"
+    ]
+  },
+  "heroAside": {
+    "variant": "rotate",
+    "rotateLines": ["AI + mobile", "Fintech & pagos", "Multi-agent"],
+    "rotateIntervalMs": 3000
+  },
+  "header": {
+    "subtitle": "AI Product Engineer | Prompt Engineer | Multi-Agent Systems | Fintech",
+    "nameLine1": "JHOAN",
+    "nameLine2": "BURBANO",
+    "image": "/photo.png",
+    "contactLine": "Colombia | jsburbano.framer.website | joans.burbano@gmail.com | linkedin.com/in/jsburbano",
+    "contactLinks": [
+      { "label": "jsburbano.framer.website", "url": "https://jsburbano.framer.website" },
+      { "label": "joans.burbano@gmail.com", "url": "mailto:joans.burbano@gmail.com" },
+      { "label": "linkedin.com/in/jsburbano", "url": "https://linkedin.com/in/jsburbano" }
+    ]
+  },
+  "professionalSummary": "AI Product Engineer with 8+ years of experience building real-world products across mobile, frontend, and backend systems. Specialized in prompt engineering, multi-agent orchestration, and AI-powered product execution. Strong fintech background integrating payment systems and handling transactional flows in production. Focused on turning AI capabilities into scalable, reliable, and production-ready systems.",
+  "softSkills": [
+    "Comunicación clara con producto y stakeholders",
+    "Pensamiento sistémico y priorización bajo incertidumbre",
+    "Mentoría técnica y revisiones constructivas",
+    "Trabajo en equipo remoto y async-first",
+    "Adaptabilidad y aprendizaje continuo",
+    "Criterio y responsabilidad en IA aplicada a producción"
+  ],
+  "coreSkills": [
+    {
+      "category": "AI & Prompt Engineering",
+      "items": [
+        "Prompt Engineering",
+        "Multi-Agent Systems",
+        "Context Engineering",
+        "LLM Workflows",
+        "AI-assisted Development",
+        "Code Generation",
+        "Refactoring Automation",
+        "AI Product Workflows"
+      ]
+    },
+    {
+      "category": "AI Stack",
+      "items": [
+        "OpenAI",
+        "Claude",
+        "Gemini",
+        "Cursor",
+        "Windsurf",
+        "Framer AI",
+        "Figma Make",
+        "Midjourney",
+        "Firefly"
+      ]
+    },
+    {
+      "category": "Fintech",
+      "items": [
+        "Stripe",
+        "MercadoPago",
+        "Wompi",
+        "PayU",
+        "Kushki",
+        "Payválida",
+        "Conekta",
+        "Checkout Flows",
+        "Transaction Validation",
+        "Payment Systems"
+      ]
+    },
+    {
+      "category": "Engineering",
+      "items": [
+        "React",
+        "React Native",
+        "Next.js",
+        "Node.js",
+        "TypeScript",
+        "Firebase",
+        "CI/CD",
+        "Clean Architecture"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "category": "AI Agents & Dev",
+      "items": ["Cursor", "Claude Code", "ChatGPT", "Gemini"]
+    },
+    {
+      "category": "GenAI Creative",
+      "items": ["Midjourney", "Firefly"]
+    },
+    {
+      "category": "Payment Gateways",
+      "items": ["Stripe", "MercadoPago", "Kushki", "Conekta"]
+    },
+    {
+      "category": "Testing",
+      "items": ["Jest", "React Testing Library", "Cypress", "Playwright"]
+    },
+    {
+      "category": "CI/CD",
+      "items": ["GitHub Actions", "Bitbucket Pipelines", "CircleCI"]
+    }
+  ],
+"experience": [
+
+  {
+
+    "role": "AI Product Engineer (Self-Directed)",
+
+    "company": "Freelance",
+
+    "period": "2023 - Present",
+
+    "description": "Designed and orchestrated multi-agent AI systems with defined roles, rules, and execution flows. Applied advanced prompt and context engineering to build AI workflows for code generation, refactoring, documentation, and product development. Focused on turning AI capabilities into real, production-ready systems using tools like OpenAI, Claude, Gemini, Cursor, and Windsurf."
+
+  },
+
+  {
+
+    "role": "Senior Mobile Engineer (Team Lead)",
+
+    "company": "Cheaf",
+
+    "period": "2024 - Present",
+
+    "description": "Led development of mobile applications handling real transactional flows (checkout, delivery, validation). Applied AI-assisted workflows to accelerate development, refactoring, and feature delivery. Improved onboarding performance and reduced friction in critical flows. Increased reliability through better error handling and system design."
+
+  },
+
+  {
+
+    "role": "Mobile Engineer (Team Lead)",
+
+    "company": "Teamcore",
+
+    "period": "2024 - 2025",
+
+    "description": "Developed mobile applications for data-driven operational systems in retail environments. Worked with execution workflows and performance-critical features. Leveraged AI tools for code generation, refactoring, and documentation. Focused on scalability, performance, and reliability in real-world conditions."
+
+  },
+
+  {
+
+    "role": "Product Engineer",
+
+    "company": "LingoQuesto",
+
+    "period": "2025 (MVP launch)",
+
+    "description": "Led product vision, design, and development of digital solutions focused on real user impact. Combined UX thinking with high-level technical execution to build scalable products aligned with market needs."
+
+  },
+
+  {
+
+    "role": "Senior Software Developer (Tech Lead)",
+
+    "company": "Somos Inmobiliarios",
+
+    "period": "2025 (Platform launch)",
+
+    "description": "Led development of a scalable real estate platform combining product thinking, automation, and system design. Built features for sales, learning, and growth. Applied AI-assisted workflows to accelerate delivery, refactor systems, and generate documentation."
+
+  },
+
+  {
+
+    "role": "Frontend Engineer (Fintech)",
+
+    "company": "Aplazo",
+
+    "period": "2022 - 2023",
+
+    "description": "Owned and maintained payment and risk flows in a BNPL fintech environment. Implemented transaction validation logic and financial systems. Refactored critical modules aligned with evolving payment requirements. Focused on reliability and edge-case handling in financial products."
+
+  },
+
+  {
+
+    "role": "Team Lead",
+
+    "company": "SIA",
+
+    "period": "2022 - 2023",
+
+    "description": "Led frontend development team, planning sprints, tracking progress, and aligning technical execution with business requirements. Oversaw feature delivery and refactoring strategies to ensure product success."
+
+  },
+
+  {
+
+    "role": "Software Developer",
+
+    "company": "e-volution",
+
+    "period": "2021 - 2022",
+
+    "description": "Led three fintech projects focused on payment systems and user experience. Built and maintained transactional systems, integrating payment gateways and improving UX in financial flows."
+
+  },
+
+  {
+
+    "role": "Teaching Assistant (Full Stack)",
+
+    "company": "Henry",
+
+    "period": "2021 - 2022",
+
+    "description": "Supported students in a full-stack bootcamp, guiding them through core concepts, exercises, and collaborative development practices like pair programming. Helped improve learning processes and technical understanding."
+
+  },
+
+  {
+
+    "role": "Full Stack Engineer",
+
+    "company": "Iuvity",
+
+    "period": "2020 - 2021",
+
+    "description": "Developed web and mobile solutions with focus on scalable architecture and user experience. Worked on fullstack features and integrations across different products."
+
+  },
+
+  {
+
+    "role": "Fullstack Engineer (Freelance)",
+
+    "company": "JSBurbano",
+
+    "period": "2016 - 2020",
+
+    "description": "Built multiple fintech-oriented products and transactional systems across web and mobile platforms. Implemented payment flows, transaction validation logic, and data-driven dashboards. Delivered end-to-end solutions from product definition to production."
+
+  }
+
+],
+  "projects": {
+    "web": [
+      {
+        "slug": "plataforma-growth-inmobiliario",
+        "title": "Plataforma de growth inmobiliario",
+        "description": "Web app modular para ventas, aprendizaje y crecimiento con arquitectura escalable y flujos orientados a conversión.",
+        "detailParagraphs": [
+          "Lideré la definición técnica de un ecosistema modular donde ventas, contenido educativo y métricas de crecimiento conviven sin acoplamiento frágil. El foco estuvo en permitir releases frecuentes sin romper contratos entre módulos.",
+          "Se priorizó observabilidad ligera y manejo de errores en flujos críticos (onboarding, pagos y progreso de usuario). La base de código se apoyó en TypeScript estricto, revisiones consistentes y pipelines de CI para reducir regresiones.",
+          "Desde producto, el reto fue balancear velocidad con deuda técnica: automatización con agentes de código para documentación y refactors controlados, sin sustituir criterio humano en decisiones de arquitectura."
+        ],
+        "stack": ["Next.js", "TypeScript", "Design system", "CI/CD"],
+        "year": "2025",
+        "highlight": "Tech lead",
+        "webUrl": "https://jsburbano.framer.website/projects/financial-tracking-platform"
+      },
+      {
+        "slug": "checkout-riesgo-aplazo",
+        "title": "Checkout y riesgo (BNPL)",
+        "description": "Mantenimiento y evolución de flujos de pago, validación transaccional y módulos críticos de riesgo en producción.",
+        "detailParagraphs": [
+          "En un contexto BNPL, los flujos de checkout y riesgo son el corazón del negocio: cualquier fallo visible o silencioso impacta conversión y compliance. Trabajé en validación transaccional, estados intermedios y reconciliación con proveedores.",
+          "Los refactors se hicieron por vertical slices para no paralizar releases: pruebas de regresión focalizadas, feature flags donde aportaban, y comunicación clara con stakeholders de riesgo y operaciones.",
+          "La mentalidad fue siempre production-first: logs útiles, trazabilidad de decisiones de riesgo y UX que reduce abandono sin ocultar costos reales al usuario."
+        ],
+        "stack": ["React", "Fintech", "Testing", "Refactors"],
+        "year": "2022 — 2023",
+        "highlight": "Fintech",
+        "webUrl": "https://aplazo.mx",
+        "appUrl": "https://apps.apple.com/mx/app/aplazo/id1556818302"
+      },
+      {
+        "slug": "portfolio-cv-next",
+        "title": "Portfolio & presencia web",
+        "description": "Sitio de alto impacto visual con contenido centralizado en JSON, SEO y exportación de CV.",
+        "detailParagraphs": [
+          "Este sitio concentra portafolio, servicios y CV en un solo JSON tipado, con rutas estáticas para SEO y páginas de proyecto dedicadas.",
+          "La exportación de CV replica el layout del export Vite del monorepo (mismos bloques y estilos) usando react-to-print para PDF.",
+          "Navegación con microinteracciones, tema claro/oscuro y formulario de contacto con persistencia local vía API Route en Node."
+        ],
+        "stack": ["Next.js", "Framer Motion", "Tailwind"],
+        "year": "2026",
+        "highlight": "Este sitio",
+        "webUrl": "https://jsburbano.framer.website",
+        "repoUrl": "https://github.com/jsburbano"
+      }
+    ],
+    "mobile": [
+      {
+        "slug": "app-transaccional-delivery",
+        "title": "App transaccional (food / delivery)",
+        "description": "Mobile con flujos reales de checkout, entrega y validación; foco en performance de onboarding y manejo de errores.",
+        "detailParagraphs": [
+          "Aplicaciones con pedidos reales exigen disciplina en estados de red, reintentos y feedback inmediato al usuario. Reduje fricción en onboarding midiendo tiempos por paso y eliminando pasos redundantes.",
+          "Integración con pasos de validación post-pago y seguimiento de entrega: la app debía seguir siendo usable con señal intermitente y sin duplicar órdenes ante doble tap.",
+          "Liderazgo técnico implica dejar patrones claros: boundaries por feature, pruebas en flujos críticos y revisiones que priorizan riesgo sobre estética de diff."
+        ],
+        "stack": ["React Native", "Pagos", "Observabilidad"],
+        "year": "2024 — Present",
+        "highlight": "Team Lead",
+        "webUrl": "https://jsburbano.framer.website/projects/delivery-optimized-app",
+        "appUrl": "https://apps.apple.com/co/app/cheaf-salva-comida-y-ahorra/id1527621516"
+      },
+      {
+        "slug": "operaciones-data-driven",
+        "title": "Operaciones data-driven",
+        "description": "Apps móviles para ejecución operativa en campo con features sensibles a performance y confiabilidad.",
+        "detailParagraphs": [
+          "Cuando el usuario está en campo, la app compite con el sol, la batería y el tiempo: listas grandes se virtualizan, payloads se recortan y la UI evita bloqueos en el hilo principal.",
+          "Los flujos operativos suelen nacer en spreadsheet y maduran a producto: traduje requisitos ambiguos en estados finitos y pantallas que toleran datos incompletos con guardado progresivo.",
+          "AI-assisted development aceleró iteración en refactors y documentación, manteniendo revisión humana en cambios que tocan persistencia o permisos."
+        ],
+        "stack": ["React Native", "TypeScript", "Offline-first patterns"],
+        "year": "2024 — 2025",
+        "webUrl": "https://jsburbano.framer.website/projects/sports-matching-app"
+      }
+    ]
+  },
+  "servicePacks": [
+    {
+      "badge": "Línea web",
+      "title": "Web + presencia + contacto",
+      "description": "No solo landing: sitio o sección de producto, página de captación, blog ligero o multi-sección según necesidad — siempre con performance, SEO base y formulario de leads o contacto conectado a tu operación.",
+      "includes": [
+        "Arquitectura de información y UI coherente con tu marca",
+        "Next.js responsive, Core Web Vitals y metadatos SEO",
+        "Formulario de contacto/leads con validación y mitigación anti-spam básica",
+        "Integración liviana (email, webhook, Sheet/CRM según alcance acordado)",
+        "Deploy + handover + 1 ronda de ajustes UI/copy"
+      ],
+      "startingPrice": "USD 600",
+      "priceNote": "USD o equivalente COP (TRM del día) · IVA según aplique.",
+      "disclaimer": "Precio inicial orientativo. El presupuesto cerrado depende de número de páginas/secciones, CMS, multi-idioma, animación, integraciones (CRM, analytics, pagos), compliance y plazos. Sin cobro hasta aprobación escrita de alcance y propuesta.",
+      "requestServiceId": "landing-leads-pack",
+      "ctaLabel": "Cotizar pack web"
+    },
+    {
+      "badge": "Producto digital",
+      "title": "App web / mobile cross-platform",
+      "description": "Diseño y construcción de experiencia unificada en navegador y app móvil (React Native + web compartida donde aplique), con navegación clara, estados de carga y bases listas para escalar.",
+      "includes": [
+        "Discovery corto: flujos críticos, roles y pantallas piloto",
+        "UI kit / componentes reutilizables y accesibilidad razonable",
+        "App React Native + capa web (Next o SPA) alineada al mismo dominio de producto",
+        "Autenticación, navegación y al menos un flujo transaccional o core acordado",
+        "Builds, entorno de staging y checklist de salida a producción"
+      ],
+      "startingPrice": "USD 2.500",
+      "priceNote": "Alcance MVP acotado; extensiones por fases.",
+      "disclaimer": "El precio inicial aplica a un MVP acotado (número de pantallas y flujos fijados en propuesta). Cambios de alcance, integraciones complejas, offline-first, tiendas o pagos in-app cotizan aparte. Requiere firma de alcance antes de desarrollo facturable.",
+      "requestServiceId": "cross-platform-design-pack",
+      "ctaLabel": "Cotizar app cross-platform"
+    },
+    {
+      "badge": "Operaciones",
+      "title": "Automatizaciones & integraciones",
+      "description": "Menos trabajo manual: sincronización entre herramientas, alertas, pipelines de datos, webhooks y asistentes prácticos (sin magia — con logs y controles).",
+      "includes": [
+        "Mapeo del proceso actual y puntos de fricción",
+        "Automatización en n8n / Make / Zapier o scripts Node según caso",
+        "Webhooks, APIs internas, notificaciones (Slack, email, etc.)",
+        "Documentación corta de mantenimiento y re-ejecución",
+        "Sesión de handover y ventana de soporte acotada post-go-live"
+      ],
+      "startingPrice": "USD 950",
+      "priceNote": "Por flujo o paquete de hasta N pasos acordados.",
+      "disclaimer": "Precio guía por paquete de complejidad media-baja. Volúmenes altos, SLAs estrictos, compliance sectorial o multi-tenant requieren cotización dedicada. Límites de volumen y reintentos se fijan por escrito.",
+      "requestServiceId": "automation-pack",
+      "ctaLabel": "Cotizar automatización"
+    }
+  ],
+  "services": [
+    {
+      "id": "landing-leads-pack",
+      "title": "Pack: Web + contacto / leads",
+      "description": "Sitio o landing con captación y entrega de leads.",
+      "deliverables": ["Next.js", "SEO base", "Formulario + integración", "Deploy"],
+      "priceHint": "USD 600 · cotización"
+    },
+    {
+      "id": "cross-platform-design-pack",
+      "title": "Pack: App web + mobile cross-platform",
+      "description": "Producto digital unificado en web y app móvil.",
+      "deliverables": ["React Native", "Web alineada", "UI system", "MVP acotado"],
+      "priceHint": "USD 2.500 · cotización"
+    },
+    {
+      "id": "automation-pack",
+      "title": "Pack: Automatizaciones",
+      "description": "Flujos entre herramientas, webhooks y operaciones repetibles.",
+      "deliverables": ["n8n/Make/Node", "Webhooks", "Docs", "Handover"],
+      "priceHint": "USD 950 · cotización"
+    },
+    {
+      "id": "mobile-product",
+      "title": "Producto mobile (React Native)",
+      "description": "Diseño e implementación de apps con flujos transaccionales, modularización y calidad de producción.",
+      "deliverables": ["Arquitectura", "Features críticos", "Code review", "CI"],
+      "priceHint": "Proyecto / retainer"
+    },
+    {
+      "id": "web-platform",
+      "title": "Plataformas web (Next.js)",
+      "description": "SPAs y SSR con SEO, performance y sistemas de diseño coherentes.",
+      "deliverables": ["Next.js App Router", "Integraciones API", "Deploy"],
+      "priceHint": "Por alcance"
+    },
+    {
+      "id": "ai-workflows",
+      "title": "AI workflows & asistencia a equipos",
+      "description": "Orquestación práctica de agentes, prompts y automatización de desarrollo sin sacrificar control humano.",
+      "deliverables": ["Playbooks", "Plantillas", "Integración con tu stack"],
+      "priceHint": "Workshop + implementación"
+    },
+    {
+      "id": "fintech-integration",
+      "title": "Integraciones fintech",
+      "description": "Stripe, MercadoPago, Kushki, Conekta y validación de transacciones en flujos reales.",
+      "deliverables": ["Checkout", "Webhooks", "Edge cases"],
+      "priceHint": "Por integración"
+    }
+  ],
+  "education": [
+    "Systems Engineering — Universidad ICESI",
+    "Full Stack Developer — Henry",
+    "Public Accounting (in progress) — UNAD"
+  ],
+  "languages": [
+    { "name": "Spanish", "level": "Native" },
+    { "name": "English", "level": "Intermediate (working towards C1)" }
+  ],
+  "footerLinks": [
+    { "label": "Portfolio", "url": "https://jsburbano.framer.website" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/jsburbano" },
+    { "label": "GitHub", "url": "https://github.com/jsburbano" }
+  ],
+  "cvPdf": {
+    "url": "https://32rtv1xoeq3me6nj.public.blob.vercel-storage.com/jhoan-burbano-cv.pdf"
+  }
+}
