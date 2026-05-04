@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CvPrintView } from "@/components/cv-print/cv-print-view";
 import { CvDownloadFab } from "@/components/cv-download-fab";
-import { getCv } from "@/lib/cv";
+import { getCv, getCvExperienceForPrint } from "@/lib/cv";
 
 export const metadata: Metadata = {
   title: "CV",
@@ -16,7 +16,7 @@ export default function CvPage() {
     softSkills: c.softSkills,
     coreSkills: c.coreSkills,
     tools: c.tools,
-    experience: c.experience,
+    experience: getCvExperienceForPrint(c.experience),
     footerLinks: c.footerLinks,
     education: c.education,
     languages: c.languages,

@@ -51,6 +51,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     robots: { index: true, follow: true },
     alternates: { canonical: "/" },
+    icons: {
+      icon: [{ url: "/js-isotype.png", type: "image/png" }],
+      apple: [{ url: "/js-isotype.png", type: "image/png" }],
+    },
   };
 }
 

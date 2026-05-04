@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -25,9 +26,10 @@ export function SiteNav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
+  function onNavigate(href: string) {
     setOpen(false);
-  }, [pathname]);
+    navClarityEvent(href);
+  }
 
   useEffect(() => {
     if (!open) return;
@@ -43,10 +45,12 @@ export function SiteNav() {
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6">
         <Link
           href="/"
-          onClick={() => navClarityEvent("/")}
-          className="group flex items-baseline gap-1 font-[family-name:var(--font-display)] text-lg font-bold tracking-tight sm:text-xl"
+          onClick={() => onNavigate("/")}
+          className="group inline-flex items-center gap-2 rounded-lg outline-none ring-[var(--accent)] ring-offset-2 ring-offset-[var(--bg)] focus-visible:ring-2"
         >
-          <span className="transition group-hover:-skew-x-6">JB</span>
+          <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-black shadow-sm ring-1 ring-white/15 transition group-hover:ring-[var(--accent)]/50 sm:h-10 sm:w-10">
+            <Image src="/js-isotype.png" alt="Isotipo JS — inicio" fill className="object-contain p-1" sizes="40px" priority />
+          </span>
           <span className="hidden text-[10px] font-medium uppercase tracking-[0.35em] text-[var(--muted)] sm:inline">folio</span>
         </Link>
 
@@ -57,7 +61,7 @@ export function SiteNav() {
               <Link
                 key={l.href}
                 href={l.href}
-                onClick={() => navClarityEvent(l.href)}
+                onClick={() => onNavigate(l.href)}
                 className="relative px-3 py-2 text-sm font-medium text-[var(--muted)] transition hover:text-[var(--fg)]"
               >
                 {active && (
@@ -110,7 +114,7 @@ export function SiteNav() {
                 >
                   <Link
                     href={l.href}
-                    onClick={() => navClarityEvent(l.href)}
+                    onClick={() => onNavigate(l.href)}
                     className="block font-[family-name:var(--font-display)] text-4xl font-bold leading-tight tracking-tight text-[var(--fg)] transition hover:text-[var(--accent)]"
                   >
                     {l.label}
