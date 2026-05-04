@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ClarityTrackedLink } from "@/components/clarity-tracked-link";
 import { getCv } from "@/lib/cv";
 
 export function SiteFooter() {
@@ -14,9 +14,16 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-wrap gap-4 text-sm">
           {c.footerLinks.map((f) => (
-            <Link key={f.url} href={f.url} className="text-[var(--muted)] underline-offset-4 transition hover:text-[var(--accent)] hover:underline" target="_blank" rel="noreferrer">
+            <ClarityTrackedLink
+              key={f.url}
+              href={f.url}
+              target="_blank"
+              rel="noreferrer"
+              clarityEventOnClick={`footer_${f.label.replace(/\s+/g, "_").toLowerCase()}`}
+              className="text-[var(--muted)] underline-offset-4 transition hover:text-[var(--accent)] hover:underline"
+            >
               {f.label}
-            </Link>
+            </ClarityTrackedLink>
           ))}
         </div>
       </div>

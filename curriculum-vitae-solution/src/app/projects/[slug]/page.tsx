@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ClarityTrackedAnchor } from "@/components/clarity-tracked-anchor";
 import { PageMotion } from "@/providers/page-motion";
 import { getCv } from "@/lib/cv";
 import { getAllProjects, getProjectBySlug } from "@/lib/projects";
@@ -42,34 +43,37 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         <div className="mt-8 flex flex-wrap gap-3">
           {web && (
-            <a
+            <ClarityTrackedAnchor
               href={web}
               target="_blank"
               rel="noopener noreferrer"
+              clarityEventOnClick={`project_detail_web_${p.slug}`}
               className="inline-flex rounded-full bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[var(--accent-fg)] hover:brightness-110"
             >
               Sitio web
-            </a>
+            </ClarityTrackedAnchor>
           )}
           {app && (
-            <a
+            <ClarityTrackedAnchor
               href={app}
               target="_blank"
               rel="noopener noreferrer"
+              clarityEventOnClick={`project_detail_app_${p.slug}`}
               className="inline-flex rounded-full border border-[var(--border)] bg-[var(--surface)] px-5 py-2.5 text-sm font-semibold hover:border-[var(--accent)]"
             >
               App / tienda
-            </a>
+            </ClarityTrackedAnchor>
           )}
           {p.repoUrl && (
-            <a
+            <ClarityTrackedAnchor
               href={p.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
+              clarityEventOnClick={`project_detail_repo_${p.slug}`}
               className="inline-flex rounded-full border border-[var(--border)] px-5 py-2.5 text-sm font-semibold text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--fg)]"
             >
               Código
-            </a>
+            </ClarityTrackedAnchor>
           )}
         </div>
 

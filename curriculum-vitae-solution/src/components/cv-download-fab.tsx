@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { clarityEvent } from "@/lib/analytics/clarity";
 
 /** FAB fijo: enlace al PDF con `nocache` = timestamp (anti-caché). */
 export function CvDownloadFab({ pdfBaseUrl }: { pdfBaseUrl: string }) {
@@ -18,6 +19,7 @@ export function CvDownloadFab({ pdfBaseUrl }: { pdfBaseUrl: string }) {
       target="_blank"
       rel="noopener noreferrer"
       download
+      onClick={() => clarityEvent("cv_pdf_download_click")}
       className="no-print fixed bottom-6 right-6 z-[200] inline-flex items-center gap-2 rounded-full border-2 border-[var(--accent)] bg-[var(--accent)] px-5 py-3 text-sm font-bold text-[var(--accent-fg)] shadow-[0_0_24px_rgba(204,255,0,0.35)] transition hover:brightness-110"
     >
       Descargar

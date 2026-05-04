@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { clarityEvent } from "@/lib/analytics/clarity";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -22,7 +23,10 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={() => {
+        clarityEvent("theme_toggle");
+        setTheme(isDark ? "light" : "dark");
+      }}
       className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-sm transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
       aria-label={isDark ? "Activar tema claro" : "Activar tema oscuro"}
     >

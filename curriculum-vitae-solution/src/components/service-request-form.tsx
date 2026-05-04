@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { clarityEvent, claritySetTag, clarityUpgrade } from "@/lib/analytics/clarity";
 import type { CvService } from "@/types/cv";
 
 const initial = { name: "", email: "", company: "", message: "" };
@@ -38,13 +39,20 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
       if (!res.ok) {
         setStatus("err");
         setErrMsg(data.error ?? "No se pudo enviar. Intenta de nuevo.");
+        clarityEvent("service_request_error");
+        claritySetTag("service_request_last_error", String(res.status));
+        clarityUpgrade("service_request_http_error");
         return;
       }
       setStatus("ok");
       setForm(initial);
+      clarityEvent("service_request_success");
+      claritySetTag("last_service_id", serviceId);
     } catch {
       setStatus("err");
       setErrMsg("Error de red.");
+      clarityEvent("service_request_error");
+      clarityUpgrade("service_request_network_error");
     }
   }
 
@@ -90,6 +98,7 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
               name="name"
               required
               autoComplete="name"
+              data-clarity-mask="true"
               value={form.name}
               onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
               className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm outline-none ring-[var(--accent)] focus:ring-2"
@@ -105,6 +114,7 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
               type="email"
               required
               autoComplete="email"
+              data-clarity-mask="true"
               value={form.email}
               onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
               className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm outline-none ring-[var(--accent)] focus:ring-2"
@@ -120,6 +130,7 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
             id="company"
             name="company"
             autoComplete="organization"
+            data-clarity-mask="true"
             value={form.company}
             onChange={(e) => setForm((f) => ({ ...f, company: e.target.value }))}
             className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm outline-none ring-[var(--accent)] focus:ring-2"
@@ -135,6 +146,7 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
             name="message"
             required
             rows={6}
+            data-clarity-mask="true"
             placeholder={messagePlaceholder}
             value={form.message}
             onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}

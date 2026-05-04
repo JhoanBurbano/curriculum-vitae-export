@@ -4,9 +4,9 @@
     "nameLine1": "JHOAN",
     "nameLine2": "BURBANO",
     "image": "/photo.png",
-    "contactLine": "Colombia | jsburbano.framer.website | joans.burbano@gmail.com | linkedin.com/in/jsburbano",
+    "contactLine": "Colombia | www.jsburbano.dev | joans.burbano@gmail.com | linkedin.com/in/jsburbano",
     "contactLinks": [
-      { "label": "jsburbano.framer.website", "url": "https://jsburbano.framer.website" },
+      { "label": "www.jsburbano.dev", "url": "https://www.jsburbano.dev" },
       { "label": "joans.burbano@gmail.com", "url": "mailto:joans.burbano@gmail.com" },
       { "label": "linkedin.com/in/jsburbano", "url": "https://linkedin.com/in/jsburbano" }
     ]
@@ -134,7 +134,7 @@
   ],
 
   "footerLinks": [
-    { "label": "Portfolio", "url": "https://jsburbano.framer.website" },
+    { "label": "Portfolio", "url": "https://www.jsburbano.dev" },
     { "label": "LinkedIn", "url": "https://linkedin.com/in/jsburbano" },
     { "label": "GitHub", "url": "https://github.com/jsburbano" }
   ]

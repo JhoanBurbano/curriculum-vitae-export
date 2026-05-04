@@ -2,7 +2,7 @@
   "seo": {
     "title": "Jhoan Burbano — AI Product Engineer & Mobile",
     "description": "AI Product Engineer con 8+ años en producto real: mobile, frontend, backend, fintech y orquestación multi-agente. Portafolio, servicios y CV exportable.",
-    "siteUrl": "https://jsburbano.framer.website",
+    "siteUrl": "https://www.jsburbano.dev",
     "locale": "es_CO",
     "keywords": [
       "AI Product Engineer",
@@ -23,9 +23,9 @@
     "nameLine1": "JHOAN",
     "nameLine2": "BURBANO",
     "image": "/photo.png",
-    "contactLine": "Colombia | jsburbano.framer.website | joans.burbano@gmail.com | linkedin.com/in/jsburbano",
+    "contactLine": "Colombia | www.jsburbano.dev | joans.burbano@gmail.com | linkedin.com/in/jsburbano",
     "contactLinks": [
-      { "label": "jsburbano.framer.website", "url": "https://jsburbano.framer.website" },
+      { "label": "www.jsburbano.dev", "url": "https://www.jsburbano.dev" },
       { "label": "joans.burbano@gmail.com", "url": "mailto:joans.burbano@gmail.com" },
       { "label": "linkedin.com/in/jsburbano", "url": "https://linkedin.com/in/jsburbano" }
     ]
@@ -267,7 +267,7 @@
         "stack": ["Next.js", "TypeScript", "Design system", "CI/CD"],
         "year": "2025",
         "highlight": "Tech lead",
-        "webUrl": "https://jsburbano.framer.website/projects/financial-tracking-platform"
+        "webUrl": "https://www.jsburbano.dev/projects/plataforma-growth-inmobiliario"
       },
       {
         "slug": "checkout-riesgo-aplazo",
@@ -290,13 +290,13 @@
         "description": "Sitio de alto impacto visual con contenido centralizado en JSON, SEO y exportación de CV.",
         "detailParagraphs": [
           "Este sitio concentra portafolio, servicios y CV en un solo JSON tipado, con rutas estáticas para SEO y páginas de proyecto dedicadas.",
-          "La exportación de CV replica el layout del export Vite del monorepo (mismos bloques y estilos) usando react-to-print para PDF.",
+          "CV en pantalla alineado al export Vite del monorepo y descarga del PDF oficial desde blob (sin depender del sitio legacy).",
           "Navegación con microinteracciones, tema claro/oscuro y formulario de contacto con persistencia local vía API Route en Node."
         ],
         "stack": ["Next.js", "Framer Motion", "Tailwind"],
         "year": "2026",
         "highlight": "Este sitio",
-        "webUrl": "https://jsburbano.framer.website",
+        "webUrl": "https://www.jsburbano.dev",
         "repoUrl": "https://github.com/jsburbano"
       }
     ],
@@ -313,7 +313,7 @@
         "stack": ["React Native", "Pagos", "Observabilidad"],
         "year": "2024 — Present",
         "highlight": "Team Lead",
-        "webUrl": "https://jsburbano.framer.website/projects/delivery-optimized-app",
+        "webUrl": "https://www.jsburbano.dev/projects/app-transaccional-delivery",
         "appUrl": "https://apps.apple.com/co/app/cheaf-salva-comida-y-ahorra/id1527621516"
       },
       {
@@ -327,7 +327,7 @@
         ],
         "stack": ["React Native", "TypeScript", "Offline-first patterns"],
         "year": "2024 — 2025",
-        "webUrl": "https://jsburbano.framer.website/projects/sports-matching-app"
+        "webUrl": "https://www.jsburbano.dev/projects/operaciones-data-driven"
       }
     ]
   },
@@ -445,7 +445,7 @@
     { "name": "English", "level": "Intermediate (working towards C1)" }
   ],
   "footerLinks": [
-    { "label": "Portfolio", "url": "https://jsburbano.framer.website" },
+    { "label": "Portfolio", "url": "https://www.jsburbano.dev" },
     { "label": "LinkedIn", "url": "https://linkedin.com/in/jsburbano" },
     { "label": "GitHub", "url": "https://github.com/jsburbano" }
   ],

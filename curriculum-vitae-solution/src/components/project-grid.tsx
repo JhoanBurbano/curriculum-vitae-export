@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ClarityTrackedAnchor } from "@/components/clarity-tracked-anchor";
 import type { CvProject } from "@/types/cv";
 
 function webHref(p: CvProject) {
@@ -31,19 +32,37 @@ function ProjectCard({ p }: { p: CvProject }) {
           Detalle
         </Link>
         {web && (
-          <a href={web} target="_blank" rel="noreferrer" className="font-medium text-[var(--accent)] underline-offset-4 hover:underline">
+          <ClarityTrackedAnchor
+            href={web}
+            target="_blank"
+            rel="noreferrer"
+            clarityEventOnClick={`project_grid_web_${p.slug}`}
+            className="font-medium text-[var(--accent)] underline-offset-4 hover:underline"
+          >
             Web
-          </a>
+          </ClarityTrackedAnchor>
         )}
         {p.appUrl && (
-          <a href={p.appUrl} target="_blank" rel="noreferrer" className="text-[var(--muted)] underline-offset-4 hover:text-[var(--fg)] hover:underline">
+          <ClarityTrackedAnchor
+            href={p.appUrl}
+            target="_blank"
+            rel="noreferrer"
+            clarityEventOnClick={`project_grid_app_${p.slug}`}
+            className="text-[var(--muted)] underline-offset-4 hover:text-[var(--fg)] hover:underline"
+          >
             App
-          </a>
+          </ClarityTrackedAnchor>
         )}
         {p.repoUrl && (
-          <a href={p.repoUrl} target="_blank" rel="noreferrer" className="text-[var(--muted)] underline-offset-4 hover:text-[var(--fg)] hover:underline">
+          <ClarityTrackedAnchor
+            href={p.repoUrl}
+            target="_blank"
+            rel="noreferrer"
+            clarityEventOnClick={`project_grid_repo_${p.slug}`}
+            className="text-[var(--muted)] underline-offset-4 hover:text-[var(--fg)] hover:underline"
+          >
             Repo
-          </a>
+          </ClarityTrackedAnchor>
         )}
       </div>
     </article>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ClarityTrackedLink } from "@/components/clarity-tracked-link";
 import type { ServicePack } from "@/types/cv";
 
 export function RequestServiceAside({ packs }: { packs: ServicePack[] }) {
@@ -33,15 +33,16 @@ export function RequestServiceAside({ packs }: { packs: ServicePack[] }) {
         <ul className="mt-3 space-y-2">
           {packs.map((p) => (
             <li key={p.requestServiceId}>
-              <Link
+              <ClarityTrackedLink
                 href={`/request-service?service=${encodeURIComponent(p.requestServiceId)}`}
+                clarityEventOnClick={`aside_pack_link_${p.requestServiceId.replace(/[^a-zA-Z0-9_-]/g, "_")}`}
                 className="flex items-center justify-between gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg)] px-3 py-2.5 text-sm font-medium transition hover:border-[var(--accent)]/50 hover:text-[var(--accent)]"
               >
                 <span className="line-clamp-1">{p.title}</span>
                 <span aria-hidden className="text-[var(--muted)]">
                   →
                 </span>
-              </Link>
+              </ClarityTrackedLink>
             </li>
           ))}
         </ul>
@@ -49,9 +50,13 @@ export function RequestServiceAside({ packs }: { packs: ServicePack[] }) {
       <p className="rounded-xl border border-[var(--border)] bg-[var(--bg)]/80 p-4 text-xs leading-relaxed text-[var(--muted)]">
         Los precios “desde” son orientativos. La propuesta económica y el alcance se formalizan por escrito antes de cualquier cobro.
       </p>
-      <Link href="/services" className="text-center text-sm font-semibold text-[var(--accent)] underline-offset-4 hover:underline">
+      <ClarityTrackedLink
+        href="/services"
+        clarityEventOnClick="aside_back_to_services"
+        className="text-center text-sm font-semibold text-[var(--accent)] underline-offset-4 hover:underline"
+      >
         ← Ver todos los servicios
-      </Link>
+      </ClarityTrackedLink>
     </aside>
   );
 }

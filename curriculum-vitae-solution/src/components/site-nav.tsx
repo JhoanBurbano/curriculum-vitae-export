@@ -5,6 +5,12 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { clarityEvent } from "@/lib/analytics/clarity";
+
+function navClarityEvent(href: string) {
+  const suffix = href === "/" ? "home" : href.slice(1).replace(/\//g, "_");
+  clarityEvent(`nav_click_${suffix}`);
+}
 
 const links = [
   { href: "/", label: "Inicio" },
@@ -35,7 +41,11 @@ export function SiteNav() {
   return (
     <header className="no-print sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--bg)]/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6">
-        <Link href="/" className="group flex items-baseline gap-1 font-[family-name:var(--font-display)] text-lg font-bold tracking-tight sm:text-xl">
+        <Link
+          href="/"
+          onClick={() => navClarityEvent("/")}
+          className="group flex items-baseline gap-1 font-[family-name:var(--font-display)] text-lg font-bold tracking-tight sm:text-xl"
+        >
           <span className="transition group-hover:-skew-x-6">JB</span>
           <span className="hidden text-[10px] font-medium uppercase tracking-[0.35em] text-[var(--muted)] sm:inline">folio</span>
         </Link>
@@ -44,7 +54,12 @@ export function SiteNav() {
           {links.map((l) => {
             const active = pathname === l.href;
             return (
-              <Link key={l.href} href={l.href} className="relative px-3 py-2 text-sm font-medium text-[var(--muted)] transition hover:text-[var(--fg)]">
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => navClarityEvent(l.href)}
+                className="relative px-3 py-2 text-sm font-medium text-[var(--muted)] transition hover:text-[var(--fg)]"
+              >
                 {active && (
                   <motion.span
                     layoutId="nav-pill"
@@ -95,6 +110,7 @@ export function SiteNav() {
                 >
                   <Link
                     href={l.href}
+                    onClick={() => navClarityEvent(l.href)}
                     className="block font-[family-name:var(--font-display)] text-4xl font-bold leading-tight tracking-tight text-[var(--fg)] transition hover:text-[var(--accent)]"
                   >
                     {l.label}

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ClarityTrackedLink } from "@/components/clarity-tracked-link";
 import type { ServicePack } from "@/types/cv";
 
 /** Tarjeta compacta de pack (grid en /services) */
@@ -38,12 +38,13 @@ export function ServicePackCard({ pack }: { pack: ServicePack }) {
           <p className="text-[10px] font-semibold uppercase tracking-wide text-amber-200/85">Cotización</p>
           <p className="mt-1 line-clamp-4 text-[10px] leading-relaxed text-[var(--muted)]">{pack.disclaimer}</p>
         </div>
-        <Link
+        <ClarityTrackedLink
           href={href}
+          clarityEventOnClick={`pack_cta_${pack.requestServiceId.replace(/[^a-zA-Z0-9_-]/g, "_")}`}
           className="inline-flex w-full items-center justify-center rounded-full bg-[var(--accent)] py-3 text-center text-sm font-bold text-[var(--accent-fg)] transition hover:brightness-110"
         >
           {cta}
-        </Link>
+        </ClarityTrackedLink>
       </div>
     </article>
   );

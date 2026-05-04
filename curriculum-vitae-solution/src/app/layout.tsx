@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Syne } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { ClarityProvider } from "@/providers/clarity-provider";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { JsonLdPerson } from "@/components/json-ld";
@@ -63,9 +64,11 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col antialiased">
         <JsonLdPerson />
         <ThemeProvider>
-          <SiteNav />
-          <main className="flex flex-1 flex-col">{children}</main>
-          <SiteFooter />
+          <ClarityProvider>
+            <SiteNav />
+            <main className="flex flex-1 flex-col">{children}</main>
+            <SiteFooter />
+          </ClarityProvider>
         </ThemeProvider>
       </body>
     </html>
