@@ -276,9 +276,9 @@
         "outcomes": [
           "Monorepo con API + web + admin + docs",
           "Reglas de mora, becas y precios por disciplina modeladas",
-          "Landing de producto + cliente real en platform.caucanadetaekwondo.com"
+          "Landing en academy-manager.jsburbano.dev + cliente real en platform.caucanadetaekwondo.com"
         ],
-        "webUrl": "https://my-academy-landing.vercel.app",
+        "webUrl": "https://academy-manager.jsburbano.dev",
         "repoUrl": "https://github.com/JhoanBurbano/my-academy"
       },
       {
