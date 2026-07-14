@@ -276,9 +276,9 @@
         "outcomes": [
           "Monorepo con API + web + admin + docs",
           "Reglas de mora, becas y precios por disciplina modeladas",
-          "Deploy Vercel (web, admin, API, docs) listo para demos comerciales"
+          "Landing de producto + cliente real en platform.caucanadetaekwondo.com"
         ],
-        "webUrl": "https://my-academy-npry.vercel.app",
+        "webUrl": "https://my-academy-landing.vercel.app",
         "repoUrl": "https://github.com/JhoanBurbano/my-academy"
       },
       {
@@ -328,7 +328,7 @@
         "outcomes": [
           "Dominio caucanadetaekwondo.com en producción",
           "Planes y narrativa de logros listos para conversión",
-          "Base para crecer a operaciones (pagos/alumnos) vía Academy Manager"
+          "Base para crecer a operaciones (pagos/alumnos) vía Academy Manager en platform.caucanadetaekwondo.com"
         ],
         "webUrl": "https://www.caucanadetaekwondo.com",
         "repoUrl": "https://github.com/JhoanBurbano/caucana-taekwondo-website"
@@ -509,7 +509,7 @@
           "Mayor confiabilidad en flujos transaccionales",
           "Patrones de equipo reutilizables"
         ],
-        "webUrl": "https://www.jsburbano.dev/projects/app-transaccional-delivery",
+        "webUrl": "https://www.cheaf.com",
         "appUrl": "https://apps.apple.com/co/app/cheaf-salva-comida-y-ahorra/id1527621516"
       },
       {
@@ -533,8 +533,7 @@
           "Flujos operativos más confiables",
           "Mejor rendimiento en listas grandes",
           "Traducción clara de requisitos ambiguos a estados"
-        ],
-        "webUrl": "https://www.jsburbano.dev/projects/operaciones-data-driven"
+        ]
       }
     ]
   },
