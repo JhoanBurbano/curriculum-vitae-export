@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
 import { PageMotion } from "@/providers/page-motion";
-import { ProjectGrid } from "@/components/project-grid";
+import { ProjectsShowcase } from "@/components/projects-showcase";
 import { getCv } from "@/lib/cv";
+import { getAllProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Proyectos",
-  description: "Selección de trabajo web y mobile.",
+  description: "Casos de producto web, mobile y SaaS con mirada de AI Product Engineer.",
 };
 
 export default function ProjectsPage() {
-  const c = getCv();
+  const projects = getAllProjects(getCv());
   return (
     <PageMotion>
-      <div className="mx-auto max-w-6xl space-y-16 px-4 py-14 sm:px-6 sm:py-20">
-        <div>
-          <h1 className="font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight sm:text-5xl">Proyectos</h1>
-          <p className="mt-4 max-w-2xl text-[var(--muted)]">Casos web y mobile alineados a producto, pagos y performance.</p>
+      <div className="relative overflow-hidden">
+        <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-[var(--accent)]/12 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-[var(--accent-2)]/15 blur-3xl" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+          <ProjectsShowcase projects={projects} />
         </div>
-        <ProjectGrid title="Web" items={c.projects.web} />
-        <ProjectGrid title="Mobile" items={c.projects.mobile} />
       </div>
     </PageMotion>
   );

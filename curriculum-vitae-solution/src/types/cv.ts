@@ -10,7 +10,7 @@ export interface CvProject {
   slug: string;
   title: string;
   description: string;
-  /** Párrafos largos para la página de detalle */
+  /** Párrafos largos para la página de detalle (contexto adicional) */
   detailParagraphs: string[];
   stack: string[];
   /** Sitio público (landing, marketing o producto web) */
@@ -22,6 +22,20 @@ export interface CvProject {
   url?: string;
   year: string;
   highlight?: string;
+  /** Rol en el proyecto (product / engineering) */
+  role?: string;
+  /** Problema de negocio o usuario */
+  problem?: string;
+  /** Enfoque como product engineer (no solo tech) */
+  productApproach?: string;
+  /** Cómo se usó AI / agentes / workflows en el delivery */
+  aiLeverage?: string;
+  /** Resultados o señales de valor */
+  outcomes?: string[];
+  /** Destacado en el listado */
+  featured?: boolean;
+  /** Tag de categoría en UI (SaaS, Fintech, Client, Product…) */
+  category?: string;
 }
 
 export interface CvService {

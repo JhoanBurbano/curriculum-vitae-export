@@ -256,77 +256,284 @@
   "projects": {
     "web": [
       {
-        "slug": "plataforma-growth-inmobiliario",
-        "title": "Plataforma de growth inmobiliario",
-        "description": "Web app modular para ventas, aprendizaje y crecimiento con arquitectura escalable y flujos orientados a conversión.",
+        "slug": "academy-manager",
+        "title": "Academy Manager",
+        "description": "SaaS multi-academia listo para mercado: estudiantes, pagos, mora, becas, admin de plataforma y docs de producto.",
         "detailParagraphs": [
-          "Lideré la definición técnica de un ecosistema modular donde ventas, contenido educativo y métricas de crecimiento conviven sin acoplamiento frágil. El foco estuvo en permitir releases frecuentes sin romper contratos entre módulos.",
-          "Se priorizó observabilidad ligera y manejo de errores en flujos críticos (onboarding, pagos y progreso de usuario). La base de código se apoyó en TypeScript estricto, revisiones consistentes y pipelines de CI para reducir regresiones.",
-          "Desde producto, el reto fue balancear velocidad con deuda técnica: automatización con agentes de código para documentación y refactors controlados, sin sustituir criterio humano en decisiones de arquitectura."
+          "Academy Manager nació para que academias deportivas dejen hojas de cálculo y WhatsApp como sistema de verdad: un tenant por academia, roles claros y reglas de mora/becas explícitas.",
+          "El producto incluye web de academia, admin de plataforma (planes, precios por disciplina) y documentación Docusaurus para onboarding de operadores — no solo código, handover de negocio.",
+          "Como AI Product Engineer, prioricé flujos cobrables y estados de estudiante/pago antes que features cosméticas: lo que genera mora o fricción de cobro se modeló como reglas, no como excepciones en UI."
         ],
-        "stack": ["Next.js", "TypeScript", "Design system", "CI/CD"],
+        "stack": ["Next.js", "Express", "Prisma", "Multi-tenant", "Docusaurus"],
+        "year": "2026",
+        "highlight": "SaaS ready",
+        "category": "SaaS",
+        "featured": true,
+        "role": "AI Product Engineer · Founder build",
+        "problem": "Academias crecen en alumnos y torneos, pero operan con cobros manuales, mora invisible y roles difusos. El riesgo no es “falta de app”: es pérdida de cashflow y caos operativo.",
+        "productApproach": "Diseñé el dominio alrededor de academia → estudiante → plan/pago → mora/beca. Separé admin de plataforma (multi-tenant) de la web operativa diaria. Documenté reglas de negocio para que el producto sea operable sin mí.",
+        "aiLeverage": "Usé orquestación AI para acelerar API ↔ web, seeds, docs de reglas y validación cruzada sin diluir ownership humano en cobros y permisos.",
+        "outcomes": [
+          "Monorepo con API + web + admin + docs",
+          "Reglas de mora, becas y precios por disciplina modeladas",
+          "Deploy Vercel (web, admin, API, docs) listo para demos comerciales"
+        ],
+        "webUrl": "https://my-academy-npry.vercel.app",
+        "repoUrl": "https://github.com/JhoanBurbano/my-academy"
+      },
+      {
+        "slug": "fintru",
+        "title": "Fintru — safe daily spend",
+        "description": "Producto fintech de waitlist: un número diario de gasto seguro para ejecutar el plan, no abandonarlo.",
+        "detailParagraphs": [
+          "Fintru ataca el gap knowing–doing: la gente conoce consejos de ahorro, pero no tiene un sistema diario que traduzca riqueza en “cuánto puedo gastar hoy”.",
+          "La landing empuja early access, creencia de producto y pricing de founding members — diseño de go-to-market, no solo UI.",
+          "El mensaje evita tip lists: control diario, runway en meses y alertas antes de desviarse."
+        ],
+        "stack": ["Next.js", "TypeScript", "Product marketing", "Waitlist"],
+        "year": "2026",
+        "highlight": "Fintech product",
+        "category": "Fintech",
+        "featured": true,
+        "role": "AI Product Engineer · Product owner",
+        "problem": "Bancos y apps de pago empujan gasto; el usuario pierde control diario. Spreadsheets y tips genéricos no se ejecutan bajo fatiga.",
+        "productApproach": "Reduje el producto a dos números accionables (gasto seguro del día y meses de libertad). Validé narrativa y funnel de waitlist antes de overbuild de banking integrations.",
+        "aiLeverage": "AI para copy de conversión, estructuras de landing y velocidad de iteración UI sin perder voz de marca ni claims financieros responsables.",
+        "outcomes": [
+          "Dominio live fintru.co con funnel de waitlist",
+          "Narrativa clara diferenciada de “otra app de presupuesto”",
+          "Base lista para pricing founder y launch May 2026"
+        ],
+        "webUrl": "https://www.fintru.co",
+        "repoUrl": "https://github.com/JhoanBurbano/fintru"
+      },
+      {
+        "slug": "caucana-taekwondo",
+        "title": "Academia Caucana de Taekwon-Do",
+        "description": "Sitio de academia real: historia competitiva, planes, galería e inscripción — presencia digital que convierte.",
+        "detailParagraphs": [
+          "Cliente real en Popayán con trayectoria competitiva (títulos nacionales e internacionales). El sitio debía transmitir autoridad y facilitar inscripción.",
+          "Estructura por trayectoria, planes de entrenamiento, logros y CTA claros — UX orientada a padres y adultos que deciden pagar mensualidad.",
+          "Entrega freelance end-to-end: contenido, UI y deploy con dominio propio."
+        ],
+        "stack": ["Vite", "TypeScript", "SEO local", "Conversion"],
+        "year": "2025 — 2026",
+        "highlight": "Client delivery",
+        "category": "Client",
+        "featured": true,
+        "role": "Product engineer · Freelance",
+        "problem": "Una academia con resultados fuertes competía en digital con landings genéricas o redes sin funnel. Perdía confianza y leads por falta de presencia seria.",
+        "productApproach": "Traté el sitio como producto de captación: prueba social (logros), claridad de planes/precios y CTAs de inscripción — no un brochure estático.",
+        "aiLeverage": "Aceleré layout, copy estructurado y assets con AI-assisted workflows, con revisión humana en claims deportivos y precios.",
+        "outcomes": [
+          "Dominio caucanadetaekwondo.com en producción",
+          "Planes y narrativa de logros listos para conversión",
+          "Base para crecer a operaciones (pagos/alumnos) vía Academy Manager"
+        ],
+        "webUrl": "https://www.caucanadetaekwondo.com",
+        "repoUrl": "https://github.com/JhoanBurbano/caucana-taekwondo-website"
+      },
+      {
+        "slug": "million-real-estate",
+        "title": "Million Luxury Real Estate",
+        "description": "Cliente Next de propiedades de lujo + API: catálogo, owners y trazas con arquitectura mantenible.",
+        "detailParagraphs": [
+          "Producto inmobiliario donde el catálogo y la confianza visual importan tanto como el CRUD: experiencia de búsqueda y ficha de propiedad.",
+          "Backend con Clean/Hexagonal (.NET o APIs asociadas) y cliente TypeScript de alto volumen de lógica de UI.",
+          "Conecta con la experiencia de growth inmobiliario: módulos de ventas y aprendizaje pueden crecer sobre la misma base."
+        ],
+        "stack": ["Next.js", "TypeScript", "API", "Real estate"],
         "year": "2025",
-        "highlight": "Tech lead",
-        "webUrl": "https://www.jsburbano.dev/projects/plataforma-growth-inmobiliario"
+        "highlight": "Product + platform",
+        "category": "Product",
+        "featured": false,
+        "role": "Tech lead · Product delivery",
+        "problem": "Inventario y owners viven en sistemas frágiles; el usuario final necesita exploración fluida sin latencia percibida ni datos rotos.",
+        "productApproach": "Separé concerns de catálogo, media y ownership. Prioricé flujos de descubrimiento y ficha sobre paneles internos ruidosos.",
+        "aiLeverage": "Agentes para refactors, contratos API y documentación — review humano en persistencia y auth.",
+        "outcomes": [
+          "App live en real-state.jsburbano.dev",
+          "Repos cliente + API en GitHub",
+          "Base para growth modular (ventas / learning)"
+        ],
+        "webUrl": "https://real-state.jsburbano.dev",
+        "repoUrl": "https://github.com/JhoanBurbano/real-state-client"
+      },
+      {
+        "slug": "sportiva",
+        "title": "Sportiva",
+        "description": "Landing de producto: conectar deportistas amateurs, partidos y comunidad sin el caos de WhatsApp.",
+        "detailParagraphs": [
+          "Sportiva posiciona el problema (coordinación fragmentada) y la solución (matchmaking + historial) con funnel de descarga.",
+          "Narrativa B2C con prueba social y pasos claros: perfil → explorar → unirse → registrar resultados.",
+          "Caso de product marketing alineado a app mobile en roadmap."
+        ],
+        "stack": ["Next.js", "TypeScript", "Product landing"],
+        "year": "2025",
+        "highlight": "Product marketing",
+        "category": "Product",
+        "role": "AI Product Engineer",
+        "problem": "Organizar partidos amateur sigue en WhatsApp y Excel: cancelaciones, sin historial y sin comunidad discovery.",
+        "productApproach": "Landing que vende el job-to-be-done (jugar más, organizar menos) antes de features. CTAs App Store / Play como conversión primaria.",
+        "aiLeverage": "Iteración rápida de secciones, testimonios estructurales y hierarchy visual con revisión de claims de tracción.",
+        "outcomes": [
+          "Landing desplegada en Vercel",
+          "Story de producto lista para growth loops",
+          "Repo público de referencia"
+        ],
+        "webUrl": "https://sportiva-git-main-jhoanburbanos-projects.vercel.app",
+        "repoUrl": "https://github.com/JhoanBurbano/sportiva-landing"
+      },
+      {
+        "slug": "movelo",
+        "title": "Movelo",
+        "description": "Marketplace de entregas locales: comercios + repartidores, rutas y WhatsApp — menos comisión abusiva.",
+        "detailParagraphs": [
+          "Movelo habla a pequeños comercios cansados de platforms caras: valor en ruta, multiplataforma y notificaciones por WhatsApp.",
+          "Landing de captación dual (negocio / inversión) con métricas y demo CTA.",
+          "Enfoque product engineer: mensaje de unit economics local antes de over-engineering de routing."
+        ],
+        "stack": ["Next.js", "TypeScript", "Marketplace narrative"],
+        "year": "2025",
+        "highlight": "Logistics product",
+        "category": "Product",
+        "role": "AI Product Engineer",
+        "problem": "Comercios locales dependen de apps con comisiones altas y poca control de última milla.",
+        "productApproach": "Posicioné la promesa en libertad operativa y costo: conectar oferta cercana, optimizar ruta y comunicar por el canal que el cliente ya usa (WhatsApp).",
+        "aiLeverage": "AI para estructurar benefits, métricas y secciones dual-CTA sin diluir el mensaje core.",
+        "outcomes": [
+          "Landing live movelo-landing.vercel.app",
+          "Narrativa B2B clara para demos",
+          "Repo listo para iterar pricing/features"
+        ],
+        "webUrl": "https://movelo-landing.vercel.app",
+        "repoUrl": "https://github.com/JhoanBurbano/movelo-landing"
+      },
+      {
+        "slug": "lingoquesto-case",
+        "title": "LingoQuesto — case study",
+        "description": "Case de producto educativo de idiomas: visión, UX y ejecución técnica de un MVP orientado a impacto real.",
+        "detailParagraphs": [
+          "Como Product Engineer en LingoQuesto, uní visión de producto, diseño y build para un MVP de impacto en aprendizaje.",
+          "El case documenta decisiones de alcance: qué se construye primero para validar aprendizaje, no solo features.",
+          "Puente entre experiencia “MVP launch” del CV y evidencia navegable."
+        ],
+        "stack": ["Vue", "TypeScript", "EdTech", "Case study"],
+        "year": "2025",
+        "highlight": "MVP launch",
+        "category": "Case",
+        "role": "Product Engineer",
+        "problem": "Productos EdTech fallan cuando priorizan contenido estático sobre loops de práctica y retención.",
+        "productApproach": "Alcance MVP anclado a experiencia de aprendizaje medible; UI al servicio de progresión, no de catálogo infinito.",
+        "aiLeverage": "Workflows AI para acelerar prototipado y documentación de case sin saltarse validación pedagógica.",
+        "outcomes": [
+          "Case desplegado en Vercel",
+          "Alineado a rol Product Engineer en experiencia",
+          "Stack Vue/TS de producto real"
+        ],
+        "webUrl": "https://lingoquesto-case.vercel.app",
+        "repoUrl": "https://github.com/JhoanBurbano/lingoquesto-case"
       },
       {
         "slug": "checkout-riesgo-aplazo",
         "title": "Checkout y riesgo (BNPL)",
-        "description": "Mantenimiento y evolución de flujos de pago, validación transaccional y módulos críticos de riesgo en producción.",
+        "description": "Evolución de flujos de pago y riesgo en producción fintech: conversión, compliance y confiabilidad.",
         "detailParagraphs": [
-          "En un contexto BNPL, los flujos de checkout y riesgo son el corazón del negocio: cualquier fallo visible o silencioso impacta conversión y compliance. Trabajé en validación transaccional, estados intermedios y reconciliación con proveedores.",
-          "Los refactors se hicieron por vertical slices para no paralizar releases: pruebas de regresión focalizadas, feature flags donde aportaban, y comunicación clara con stakeholders de riesgo y operaciones.",
-          "La mentalidad fue siempre production-first: logs útiles, trazabilidad de decisiones de riesgo y UX que reduce abandono sin ocultar costos reales al usuario."
+          "En BNPL, checkout y riesgo son el corazón del negocio: fallos visibles o silenciosos impactan conversión y compliance.",
+          "Refactors por vertical slices, regresión focalizada y alineación con riesgo/ops.",
+          "Production-first: trazabilidad de decisiones y UX que reduce abandono sin ocultar costos."
         ],
         "stack": ["React", "Fintech", "Testing", "Refactors"],
         "year": "2022 — 2023",
         "highlight": "Fintech",
+        "category": "Fintech",
+        "role": "Frontend Engineer · Fintech",
+        "problem": "Flujos de pago y riesgo frágiles destruyen confianza y revenue en BNPL.",
+        "productApproach": "Traté cada cambio como riesgo de negocio: estados intermedios claros, validación y reconciliación con proveedores.",
+        "aiLeverage": "N/A en el periodo; el estándar fue engineering discipline y testing en producción.",
+        "outcomes": [
+          "Módulos críticos mantenidos en producción",
+          "Menos fricción en edge cases financieros",
+          "Colaboración directa con riesgo y operaciones"
+        ],
         "webUrl": "https://aplazo.mx",
         "appUrl": "https://apps.apple.com/mx/app/aplazo/id1556818302"
       },
       {
         "slug": "portfolio-cv-next",
         "title": "Portfolio & presencia web",
-        "description": "Sitio de alto impacto visual con contenido centralizado en JSON, SEO y exportación de CV.",
+        "description": "Este sitio: JSON tipado, SEO, servicios, Clarity y CV exportable — producto personal como sistema.",
         "detailParagraphs": [
-          "Este sitio concentra portafolio, servicios y CV en un solo JSON tipado, con rutas estáticas para SEO y páginas de proyecto dedicadas.",
-          "CV en pantalla alineado al export Vite del monorepo y descarga del PDF oficial desde blob (sin depender del sitio legacy).",
-          "Navegación con microinteracciones, tema claro/oscuro y formulario de contacto con persistencia local vía API Route en Node."
+          "Portafolio, servicios y CV en un solo source of truth tipado, con rutas estáticas y detalle de proyecto.",
+          "CV en pantalla + PDF oficial; analytics de eventos clave con Microsoft Clarity.",
+          "Microinteracciones y tema claro/oscuro sin sacrificar performance."
         ],
-        "stack": ["Next.js", "Framer Motion", "Tailwind"],
+        "stack": ["Next.js", "Framer Motion", "Tailwind", "Clarity"],
         "year": "2026",
         "highlight": "Este sitio",
+        "category": "Brand",
+        "role": "AI Product Engineer · Owner",
+        "problem": "Un portfolio genérico no comunica criterio de producto ni cierra leads de servicio.",
+        "productApproach": "Traté el sitio como producto: packs de servicio, request flow, casos con narrativa PE y CV descargable.",
+        "aiLeverage": "Agentes para delivery rápido de UI/copy/analytics manteniendo control de marca y claims.",
+        "outcomes": [
+          "jsburbano.dev en producción",
+          "Funnel de solicitud de servicio",
+          "Casos con profundidad product + tech"
+        ],
         "webUrl": "https://www.jsburbano.dev",
-        "repoUrl": "https://github.com/jsburbano"
+        "repoUrl": "https://github.com/JhoanBurbano/curriculum-vitae-export"
       }
     ],
     "mobile": [
       {
         "slug": "app-transaccional-delivery",
         "title": "App transaccional (food / delivery)",
-        "description": "Mobile con flujos reales de checkout, entrega y validación; foco en performance de onboarding y manejo de errores.",
+        "description": "Mobile con checkout, entrega y validación reales; onboarding medible y errores tolerantes.",
         "detailParagraphs": [
-          "Aplicaciones con pedidos reales exigen disciplina en estados de red, reintentos y feedback inmediato al usuario. Reduje fricción en onboarding midiendo tiempos por paso y eliminando pasos redundantes.",
-          "Integración con pasos de validación post-pago y seguimiento de entrega: la app debía seguir siendo usable con señal intermitente y sin duplicar órdenes ante doble tap.",
-          "Liderazgo técnico implica dejar patrones claros: boundaries por feature, pruebas en flujos críticos y revisiones que priorizan riesgo sobre estética de diff."
+          "Pedidos reales exigen estados de red, reintentos y feedback inmediato. Reduje fricción midiendo tiempos por paso.",
+          "Validación post-pago y seguimiento sin duplicar órdenes ante doble tap.",
+          "Liderazgo: boundaries por feature y reviews orientadas a riesgo."
         ],
         "stack": ["React Native", "Pagos", "Observabilidad"],
         "year": "2024 — Present",
         "highlight": "Team Lead",
+        "category": "Mobile",
+        "featured": true,
+        "role": "Senior Mobile Engineer · Team Lead",
+        "problem": "Fricción en onboarding y fallos en flujos de pago/entrega destruyen retención en food apps.",
+        "productApproach": "Optimicé el camino crítico (descubrir → pedir → pagar → recibir) midiendo drop-offs y endureciendo edge cases.",
+        "aiLeverage": "AI-assisted refactor y docs de flujos críticos con gate humano en pagos.",
+        "outcomes": [
+          "Mejor performance de onboarding",
+          "Mayor confiabilidad en flujos transaccionales",
+          "Patrones de equipo reutilizables"
+        ],
         "webUrl": "https://www.jsburbano.dev/projects/app-transaccional-delivery",
         "appUrl": "https://apps.apple.com/co/app/cheaf-salva-comida-y-ahorra/id1527621516"
       },
       {
         "slug": "operaciones-data-driven",
         "title": "Operaciones data-driven",
-        "description": "Apps móviles para ejecución operativa en campo con features sensibles a performance y confiabilidad.",
+        "description": "Apps de campo para retail: performance, datos incompletos y ejecución confiable.",
         "detailParagraphs": [
-          "Cuando el usuario está en campo, la app compite con el sol, la batería y el tiempo: listas grandes se virtualizan, payloads se recortan y la UI evita bloqueos en el hilo principal.",
-          "Los flujos operativos suelen nacer en spreadsheet y maduran a producto: traduje requisitos ambiguos en estados finitos y pantallas que toleran datos incompletos con guardado progresivo.",
-          "AI-assisted development aceleró iteración en refactors y documentación, manteniendo revisión humana en cambios que tocan persistencia o permisos."
+          "En campo la app compite con sol y batería: virtualización, payloads cortos, UI no bloqueante.",
+          "De spreadsheet a producto: estados finitos y guardado progresivo.",
+          "AI-assisted delivery en refactors; review humana en persistencia/permisos."
         ],
         "stack": ["React Native", "TypeScript", "Offline-first patterns"],
         "year": "2024 — 2025",
+        "highlight": "Team Lead",
+        "category": "Mobile",
+        "role": "Mobile Engineer · Team Lead",
+        "problem": "Operaciones retail dependen de datos en campo con conectividad pobre y procesos nacidos en Excel.",
+        "productApproach": "Diseñé pantallas que toleran datos incompletos y priorizan el job del operador, no el ideal del dashboard.",
+        "aiLeverage": "Aceleré refactors y documentación con agentes; humano en cambios de persistencia.",
+        "outcomes": [
+          "Flujos operativos más confiables",
+          "Mejor rendimiento en listas grandes",
+          "Traducción clara de requisitos ambiguos a estados"
+        ],
         "webUrl": "https://www.jsburbano.dev/projects/operaciones-data-driven"
       }
     ]
