@@ -18,6 +18,7 @@ const links = [
   { href: "/", label: "Inicio" },
   { href: "/experience", label: "Experiencia" },
   { href: "/projects", label: "Proyectos" },
+  { href: "/blog", label: "Blog" },
   { href: "/services", label: "Servicios" },
   { href: "/request-service", label: "Solicitar" },
   { href: "/cv", label: "CV" },
@@ -57,7 +58,8 @@ export function SiteNav() {
 
         <nav className="hidden items-center gap-1 md:flex">
           {links.map((l) => {
-            const active = pathname === l.href;
+            // Las secciones con detalle (/blog/[slug], /projects/[slug]) mantienen su pill activo.
+            const active = l.href === "/" ? pathname === "/" : pathname === l.href || pathname.startsWith(`${l.href}/`);
             return (
               <Link
                 key={l.href}

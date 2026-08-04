@@ -1,12 +1,13 @@
 import type { MetadataRoute } from "next";
 import { getCv } from "@/lib/cv";
 import { getProjectSlugs } from "@/lib/projects";
+import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const c = getCv();
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? c.seo.siteUrl).replace(/\/$/, "");
   const now = new Date();
-  const staticPaths = ["", "/experience", "/projects", "/services", "/request-service", "/cv"];
+  const staticPaths = ["", "/experience", "/projects", "/blog", "/services", "/request-service", "/cv"];
   const staticEntries: MetadataRoute.Sitemap = staticPaths.map((p) => ({
     url: `${base}${p || "/"}`,
     lastModified: now,
@@ -19,5 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
-  return [...staticEntries, ...projectEntries];
+  // Los posts declaran su propia fecha: `lastModified` real, no la del build.
+  const postEntries: MetadataRoute.Sitemap = getAllPosts().map((p) => ({
+    url: `${base}/blog/${p.slug}`,
+    lastModified: new Date(`${p.updated ?? p.date}T12:00:00Z`),
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  }));
+  return [...staticEntries, ...projectEntries, ...postEntries];
 }
