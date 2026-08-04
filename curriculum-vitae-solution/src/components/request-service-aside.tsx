@@ -5,7 +5,7 @@ export function RequestServiceAside({ packs }: { packs: ServicePack[] }) {
   return (
     <aside className="flex flex-col gap-6 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent)]">Cómo funciona</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent-ink)]">Cómo funciona</p>
         <ol className="mt-4 space-y-4 text-sm text-[var(--muted)]">
           <li className="flex gap-3">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-xs font-bold text-[var(--accent-fg)]">1</span>
@@ -36,7 +36,7 @@ export function RequestServiceAside({ packs }: { packs: ServicePack[] }) {
               <ClarityTrackedLink
                 href={`/request-service?service=${encodeURIComponent(p.requestServiceId)}`}
                 clarityEventOnClick={`aside_pack_link_${p.requestServiceId.replace(/[^a-zA-Z0-9_-]/g, "_")}`}
-                className="flex items-center justify-between gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg)] px-3 py-2.5 text-sm font-medium transition hover:border-[var(--accent)]/50 hover:text-[var(--accent)]"
+                className="flex items-center justify-between gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg)] px-3 py-2.5 text-sm font-medium transition hover:border-[var(--accent)]/50 hover:text-[var(--accent-ink)]"
               >
                 <span className="line-clamp-1">{p.title}</span>
                 <span aria-hidden className="text-[var(--muted)]">
@@ -53,7 +53,7 @@ export function RequestServiceAside({ packs }: { packs: ServicePack[] }) {
       <ClarityTrackedLink
         href="/services"
         clarityEventOnClick="aside_back_to_services"
-        className="text-center text-sm font-semibold text-[var(--accent)] underline-offset-4 hover:underline"
+        className="text-center text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline"
       >
         ← Ver todos los servicios
       </ClarityTrackedLink>

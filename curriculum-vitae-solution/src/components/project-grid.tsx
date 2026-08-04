@@ -15,14 +15,14 @@ function ProjectCard({ p, index }: { p: CvProject; index: number }) {
     >
       <div className="flex items-start justify-between gap-3">
         <h3 className="font-[family-name:var(--font-display)] text-xl font-bold tracking-tight">
-          <Link href={`/projects/${p.slug}`} className="transition hover:text-[var(--accent)]">
+          <Link href={`/projects/${p.slug}`} className="transition hover:text-[var(--accent-ink)]">
             {p.title}
           </Link>
         </h3>
         <span className="shrink-0 rounded-full bg-[var(--bg)] px-2 py-0.5 text-xs text-[var(--muted)]">{p.year}</span>
       </div>
       {(p.highlight || p.category) && (
-        <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-[var(--accent)]">{p.highlight ?? p.category}</p>
+        <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-[var(--accent-ink)]">{p.highlight ?? p.category}</p>
       )}
       <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--muted)]">{p.description}</p>
       <ul className="mt-4 flex flex-wrap gap-2">
@@ -32,7 +32,7 @@ function ProjectCard({ p, index }: { p: CvProject; index: number }) {
           </li>
         ))}
       </ul>
-      <Link href={`/projects/${p.slug}`} className="mt-5 text-sm font-semibold text-[var(--fg)] underline-offset-4 hover:text-[var(--accent)] hover:underline">
+      <Link href={`/projects/${p.slug}`} className="mt-5 text-sm font-semibold text-[var(--fg)] underline-offset-4 hover:text-[var(--accent-ink)] hover:underline">
         Ver caso →
       </Link>
     </motion.article>

@@ -27,7 +27,7 @@ export function ThemeToggle() {
         clarityEvent("theme_toggle");
         setTheme(isDark ? "light" : "dark");
       }}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-sm transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-sm transition hover:border-[var(--accent)] hover:text-[var(--accent-ink)]"
       aria-label={isDark ? "Activar tema claro" : "Activar tema oscuro"}
     >
       {isDark ? "☀" : "☾"}

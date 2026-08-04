@@ -115,7 +115,7 @@ export function SiteNav() {
                   <Link
                     href={l.href}
                     onClick={() => onNavigate(l.href)}
-                    className="block font-[family-name:var(--font-display)] text-4xl font-bold leading-tight tracking-tight text-[var(--fg)] transition hover:text-[var(--accent)]"
+                    className="block font-[family-name:var(--font-display)] text-4xl font-bold leading-tight tracking-tight text-[var(--fg)] transition hover:text-[var(--accent-ink)]"
                   >
                     {l.label}
                   </Link>

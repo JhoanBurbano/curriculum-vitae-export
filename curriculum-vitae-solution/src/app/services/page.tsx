@@ -18,7 +18,7 @@ export default function ServicesPage() {
     <PageMotion>
       <div className="border-b border-[var(--border)] bg-[var(--surface)]/40">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent)]">Oferta</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent-ink)]">Oferta</p>
           <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Servicios</h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
             Tres líneas de entrada con precio inicial y disclaimer de cotización; debajo, el catálogo para proyectos a medida (mobile, plataformas, AI, fintech).
@@ -46,7 +46,7 @@ export default function ServicesPage() {
             <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold sm:text-3xl">Packs de entrada</h2>
             <p className="mt-2 max-w-2xl text-sm text-[var(--muted)]">Web y captación, producto cross-platform, u operaciones automatizadas. Cada CTA abre el formulario con el servicio ya seleccionado.</p>
           </div>
-          <Link href="/request-service" className="text-sm font-semibold text-[var(--accent)] underline-offset-4 hover:underline">
+          <Link href="/request-service" className="text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline">
             Formulario sin pack →
           </Link>
         </div>
@@ -65,7 +65,7 @@ export default function ServicesPage() {
               <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold sm:text-3xl">Catálogo</h2>
               <p className="mt-2 max-w-xl text-sm text-[var(--muted)]">Consultoría y entregas más amplias; se cotizan por alcance o retainer.</p>
             </div>
-            <Link href="/request-service" className="text-sm font-semibold text-[var(--accent)] underline-offset-4 hover:underline">
+            <Link href="/request-service" className="text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline">
               Ir al formulario →
             </Link>
           </div>
@@ -76,7 +76,7 @@ export default function ServicesPage() {
                 key={s.id}
                 className="group flex flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition hover:border-[var(--accent)]/35 hover:shadow-[0_12px_40px_rgba(0,0,0,0.2)] sm:p-8"
               >
-                <h3 className="font-[family-name:var(--font-display)] text-xl font-bold tracking-tight group-hover:text-[var(--accent)]">{s.title}</h3>
+                <h3 className="font-[family-name:var(--font-display)] text-xl font-bold tracking-tight group-hover:text-[var(--accent-ink)]">{s.title}</h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--muted)]">{s.description}</p>
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {s.deliverables.map((d) => (
@@ -85,10 +85,10 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                {s.priceHint && <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-[var(--accent)]/90">{s.priceHint}</p>}
+                {s.priceHint && <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-[var(--accent-ink)]/90">{s.priceHint}</p>}
                 <Link
                   href={`/request-service?service=${encodeURIComponent(s.id)}`}
-                  className="mt-6 inline-flex w-fit rounded-full border border-[var(--border)] bg-[var(--bg)] px-5 py-2.5 text-sm font-semibold transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                  className="mt-6 inline-flex w-fit rounded-full border border-[var(--border)] bg-[var(--bg)] px-5 py-2.5 text-sm font-semibold transition hover:border-[var(--accent)] hover:text-[var(--accent-ink)]"
                 >
                   Solicitar
                 </Link>

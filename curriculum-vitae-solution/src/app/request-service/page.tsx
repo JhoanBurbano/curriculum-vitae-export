@@ -20,7 +20,7 @@ export default function RequestServicePage() {
     <PageMotion>
       <div className="border-b border-[var(--border)] bg-[var(--surface)]/35">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--accent)]">Brief & cotización</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--accent-ink)]">Brief & cotización</p>
           <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight sm:text-5xl">Solicitar servicio</h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] sm:text-lg">
             Cuéntame objetivo, plazo y presupuesto aproximado si lo tienes. Si vienes desde un pack, el tipo de trabajo ya viene preseleccionado; puedes cambiarlo antes de enviar.

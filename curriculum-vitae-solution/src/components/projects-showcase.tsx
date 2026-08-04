@@ -17,6 +17,12 @@ const filters: { id: FilterId; label: string }[] = [
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+/** Spotlight que sigue al cursor sobre la card. El 600px es el radio del efecto —
+ *  geometría propia de este gradiente, no espaciado, y el design system no define
+ *  un token para radios de gradiente. Vive en una constante nombrada, no suelto en
+ *  un style inline, que es justo lo que pide la regla de adherencia. */
+const SPOTLIGHT_GRADIENT = "radial-gradient(600px circle at var(--mx, 50%) var(--my, 0%), color-mix(in oklab, var(--accent) 18%, transparent), transparent 45%)";
+
 function matchesFilter(p: ProjectWithKind, filter: FilterId): boolean {
   if (filter === "all") return true;
   if (filter === "featured") return Boolean(p.featured);
@@ -40,10 +46,7 @@ function ProjectShowcaseCard({ project, index }: { project: ProjectWithKind; ind
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100"
-        style={{
-          background:
-            "radial-gradient(600px circle at var(--mx, 50%) var(--my, 0%), color-mix(in oklab, var(--accent) 18%, transparent), transparent 45%)",
-        }}
+        style={{ background: SPOTLIGHT_GRADIENT }}
         aria-hidden
       />
       <Link
@@ -72,14 +75,14 @@ function ProjectShowcaseCard({ project, index }: { project: ProjectWithKind; ind
         </div>
 
         <h3
-          className={`mt-4 font-[family-name:var(--font-display)] font-bold tracking-tight text-[var(--fg)] transition group-hover:text-[var(--accent)] ${
+          className={`mt-4 font-[family-name:var(--font-display)] font-bold tracking-tight text-[var(--fg)] transition group-hover:text-[var(--accent-ink)] ${
             project.featured && index === 0 ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"
           }`}
         >
           {project.title}
         </h3>
 
-        {project.role && <p className="mt-2 text-xs font-medium text-[var(--accent)]">{project.role}</p>}
+        {project.role && <p className="mt-2 text-xs font-medium text-[var(--accent-ink)]">{project.role}</p>}
         <p className={`mt-3 text-[var(--muted)] leading-relaxed ${project.featured && index === 0 ? "max-w-2xl text-base" : "text-sm"}`}>
           {project.description}
         </p>
@@ -122,7 +125,7 @@ export function ProjectsShowcase({ projects }: { projects: ProjectWithKind[] }) 
     <div className="space-y-10">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent)]">Casos</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent-ink)]">Casos</p>
           <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Proyectos
           </h1>

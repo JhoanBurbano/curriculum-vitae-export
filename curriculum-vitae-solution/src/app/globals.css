@@ -9,6 +9,13 @@
   --accent: #bfff00;
   --accent-2: #6366f1;
   --accent-fg: #0a0a0a;
+  /* El lima solo funciona como relleno: #bfff00 sobre --bg da 1.15:1 (ilegible).
+   * --accent-ink es el mismo tono (hue 75°) oscurecido hasta 4.75:1 para usarlo como TEXTO.
+   * En .dark no hace falta: allí el lima como texto ya da 17.3:1, así que apunta al mismo valor. */
+  --accent-ink: #5c7a00;
+  --warning-ink: #a16207;
+  --warning-border: rgba(245, 158, 11, 0.2);
+  --warning-bg: rgba(245, 158, 11, 0.05);
   --cv-paper: #ffffff;
   --cv-ink: #0a0a0a;
 }
@@ -22,6 +29,10 @@
   --accent: #ccff00;
   --accent-2: #818cf8;
   --accent-fg: #0a0a0a;
+  --accent-ink: #ccff00;
+  --warning-ink: rgba(253, 230, 138, 0.85);
+  --warning-border: rgba(245, 158, 11, 0.2);
+  --warning-bg: rgba(245, 158, 11, 0.05);
   --cv-paper: #ffffff;
   --cv-ink: #0a0a0a;
 }

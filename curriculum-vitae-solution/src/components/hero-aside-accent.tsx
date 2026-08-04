@@ -1,5 +1,13 @@
 "use client";
 
+/* eslint-disable no-restricted-syntax --
+ * Excepción de adherencia justificada: este chip pinta su propio shell casi negro
+ * (gradiente #0f2418 → #060a07 → #020302) que NO cambia con el tema. Los hex lima
+ * (#c8f090, #ecfccb) y el uso de --accent como texto son correctos aquí: van sobre
+ * ese fondo fijo, no sobre --bg, y dan >16:1 en ambos temas. Tokenizarlos exigiría
+ * tokens que solo aplican a este componente. Ver el design system JSB, guidelines/hero.
+ */
+
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { HeroAsideConfig } from "@/types/cv";

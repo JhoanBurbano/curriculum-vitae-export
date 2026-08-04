@@ -68,7 +68,7 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
 
       <div className="mt-8 space-y-6">
         <fieldset>
-          <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">Tipo de trabajo</legend>
+          <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent-ink)]">Tipo de trabajo</legend>
           <label htmlFor="service" className="sr-only">
             Servicio o pack
           </label>

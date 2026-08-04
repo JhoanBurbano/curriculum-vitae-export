@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="max-w-3xl">
           <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold sm:text-3xl">Resumen profesional</h2>
           <p className="mt-4 text-base leading-relaxed text-[var(--muted)] sm:text-lg">{c.professionalSummary}</p>
-          <Link href="/experience" className="mt-6 inline-flex text-sm font-semibold text-[var(--accent)] underline-offset-4 hover:underline">
+          <Link href="/experience" className="mt-6 inline-flex text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline">
             Ver toda la experiencia
           </Link>
         </div>
@@ -36,10 +36,10 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl space-y-10 border-t border-[var(--border)] px-4 py-16 sm:px-6 sm:py-20">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent)]">Casos</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent-ink)]">Casos</p>
             <h2 className="mt-2 font-[family-name:var(--font-display)] text-2xl font-bold sm:text-3xl">Proyectos destacados</h2>
           </div>
-          <Link href="/projects" className="text-sm font-semibold text-[var(--accent)] underline-offset-4 hover:underline">
+          <Link href="/projects" className="text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline">
             Ver todos →
           </Link>
         </div>

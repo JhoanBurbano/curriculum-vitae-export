@@ -30,7 +30,7 @@ function SectionBlock({
       transition={{ duration: 0.45, delay, ease }}
       className="scroll-mt-24"
     >
-      <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--accent)]">{eyebrow}</p>
+      <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--accent-ink)]">{eyebrow}</p>
       <h2 className="mt-2 font-[family-name:var(--font-display)] text-xl font-bold tracking-tight sm:text-2xl">{title}</h2>
       <div className="mt-4 text-base leading-relaxed text-[var(--muted)] sm:text-lg">{children}</div>
     </motion.section>
@@ -54,7 +54,7 @@ export function ProjectDetailView({
 
       <div className="relative mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
         <motion.div initial={fadeUp.initial} animate={fadeUp.animate} transition={{ duration: 0.4, ease }}>
-          <Link href="/projects" className="text-sm font-semibold text-[var(--muted)] transition hover:text-[var(--accent)]">
+          <Link href="/projects" className="text-sm font-semibold text-[var(--muted)] transition hover:text-[var(--accent-ink)]">
             ← Todos los proyectos
           </Link>
 
@@ -63,7 +63,7 @@ export function ProjectDetailView({
               {project.category ?? kindLabel}
             </span>
             {project.highlight && (
-              <span className="rounded-full bg-[var(--accent)]/15 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--accent)]">
+              <span className="rounded-full bg-[var(--accent)]/15 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--accent-ink)]">
                 {project.highlight}
               </span>
             )}
@@ -73,7 +73,7 @@ export function ProjectDetailView({
           <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
             {project.title}
           </h1>
-          {project.role && <p className="mt-3 text-sm font-medium text-[var(--accent)] sm:text-base">{project.role}</p>}
+          {project.role && <p className="mt-3 text-sm font-medium text-[var(--accent-ink)] sm:text-base">{project.role}</p>}
           <p className="mt-5 text-lg leading-relaxed text-[var(--muted)] sm:text-xl">{project.description}</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -151,7 +151,7 @@ export function ProjectDetailView({
           </SectionBlock>
 
           <motion.div initial={fadeUp.initial} animate={fadeUp.animate} transition={{ duration: 0.45, delay: 0.28, ease }}>
-            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--accent)]">Stack</p>
+            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--accent-ink)]">Stack</p>
             <ul className="mt-4 flex flex-wrap gap-2">
               {project.stack.map((s) => (
                 <li key={s} className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1.5 text-xs font-medium">
@@ -177,8 +177,8 @@ export function ProjectDetailView({
                     href={`/projects/${r.slug}`}
                     className="group block rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 transition hover:border-[var(--accent)]/50"
                   >
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--accent)]">{r.category ?? r.kind}</p>
-                    <p className="mt-2 font-[family-name:var(--font-display)] text-lg font-bold group-hover:text-[var(--accent)]">{r.title}</p>
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--accent-ink)]">{r.category ?? r.kind}</p>
+                    <p className="mt-2 font-[family-name:var(--font-display)] text-lg font-bold group-hover:text-[var(--accent-ink)]">{r.title}</p>
                     <p className="mt-2 line-clamp-2 text-sm text-[var(--muted)]">{r.description}</p>
                   </Link>
                 </li>

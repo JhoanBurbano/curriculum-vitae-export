@@ -20,7 +20,7 @@ export function SiteFooter() {
               target="_blank"
               rel="noreferrer"
               clarityEventOnClick={`footer_${f.label.replace(/\s+/g, "_").toLowerCase()}`}
-              className="text-[var(--muted)] underline-offset-4 transition hover:text-[var(--accent)] hover:underline"
+              className="text-[var(--muted)] underline-offset-4 transition hover:text-[var(--accent-ink)] hover:underline"
             >
               {f.label}
             </ClarityTrackedLink>
