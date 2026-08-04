@@ -1,14 +1,28 @@
-/* CV: mismos tokens y layout que portfolio-export (App.css), acotado a .cv-print-scope */
+/* CV imprimible, acotado a .cv-print-scope.
+ *
+ * Capa de impresión del design system JSB. El CV es otro medio — fondo oscuro
+ * fijo, una sola página, denso — pero es la misma marca, así que el acento y las
+ * tipografías salen de los tokens del sistema y no de valores propios.
+ *
+ * Antes esta capa era una marca paralela: lima #e0f11f en vez del lima de marca,
+ * Big Shoulders Display en vez de Syne e Inter en vez de Geist. Venía de una
+ * iteración anterior al sistema actual.
+ */
 
 :root {
-  --cv-bg: #121212;
-  --cv-accent: #e0f11f;
+  /* Superficie oscura del sistema. El CV no invierte con el tema: siempre oscuro. */
+  --cv-bg: #0f0f0f;
+  /* Lima de marca en su variante para fondos oscuros. */
+  --cv-accent: #ccff00;
+  /* Neutros derivados: alfas sobre la superficie oscura, equivalentes a --fg y
+   * --muted del sistema pero en rgba, porque aquí se superponen a cards. */
   --cv-text: rgba(240, 240, 240, 0.9);
   --cv-text-muted: rgba(240, 240, 240, 0.6);
   --cv-card-bg: rgba(240, 240, 240, 0.1);
   --cv-card-border: rgba(240, 240, 240, 0.2);
   --cv-line: rgba(240, 240, 240, 0.3);
-  --font-hero: "Big Shoulders Display", Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Display de marca (Syne), ya cargada por next/font en el layout raíz. */
+  --font-hero: var(--font-display), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 .cv-print-scope,
@@ -20,7 +34,7 @@
 
 .cv-print-scope {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   font-size: 12px;
   line-height: 1.5;
   color: var(--cv-text);

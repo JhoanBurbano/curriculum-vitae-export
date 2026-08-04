@@ -43,6 +43,9 @@ function CvHeader({ data }: { data: CvCopy["header"] }) {
           <span className="cv-header-name-line2">{data.nameLine2}</span>
         </h1>
         <div className="cv-header-photo">
+          {/* eslint-disable-next-line @next/next/no-img-element -- Vista de impresión:
+              next/image inyecta su propio wrapper y sizes responsivos, que en @media print
+              y al exportar a PDF no aplican y estorban. Aquí una <img> plana es lo correcto. */}
           <img src={data.image} alt="" />
         </div>
       </div>

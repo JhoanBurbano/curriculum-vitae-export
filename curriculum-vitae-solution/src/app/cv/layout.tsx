@@ -1,19 +1,14 @@
 import "./cv-print.css";
 
+/**
+ * Layout del CV imprimible.
+ *
+ * Ya no carga fuentes con `<link>` a Google Fonts. Antes traía Inter y Big
+ * Shoulders Display desde un tercero — dos peticiones bloqueantes, dos
+ * preconnect y los avisos de `no-page-custom-font` de Next — para acabar
+ * pintando el CV con tipografías que no son las de la marca. Ahora usa Syne y
+ * Geist, que el layout raíz ya sirve con `next/font` desde el propio dominio.
+ */
 export default function CvLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&display=swap"
-        rel="stylesheet"
-      />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
