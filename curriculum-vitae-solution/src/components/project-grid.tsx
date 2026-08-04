@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CvProject } from "@/types/cv";
+import { DUR_FAST, EASE_OUT_EXPO, STAGGER } from "@/lib/motion";
 
 function ProjectCard({ p, index }: { p: CvProject; index: number }) {
   return (
@@ -10,7 +11,7 @@ function ProjectCard({ p, index }: { p: CvProject; index: number }) {
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.4, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: DUR_FAST, delay: index * STAGGER, ease: EASE_OUT_EXPO }}
       className="group flex flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition hover:border-[var(--accent)]/45"
     >
       <div className="flex items-start justify-between gap-3">

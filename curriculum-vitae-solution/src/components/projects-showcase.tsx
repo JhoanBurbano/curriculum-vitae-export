@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { ProjectWithKind } from "@/lib/projects";
+import { DUR_BASE, EASE_OUT_EXPO, STAGGER } from "@/lib/motion";
 
 type FilterId = "all" | "featured" | "web" | "mobile" | "saas";
 
@@ -15,7 +16,7 @@ const filters: { id: FilterId; label: string }[] = [
   { id: "mobile", label: "Mobile" },
 ];
 
-const ease = [0.22, 1, 0.36, 1] as const;
+const ease = EASE_OUT_EXPO;
 
 /** Spotlight que sigue al cursor sobre la card. El 600px es el radio del efecto —
  *  geometría propia de este gradiente, no espaciado, y el design system no define
@@ -39,7 +40,7 @@ function ProjectShowcaseCard({ project, index }: { project: ProjectWithKind; ind
       initial={{ opacity: 0, y: 28 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.98 }}
-      transition={{ duration: 0.45, delay: Math.min(index * 0.05, 0.35), ease }}
+      transition={{ duration: DUR_BASE, delay: Math.min(index * STAGGER, 0.35), ease }}
       className={`group relative flex flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] ${
         project.featured && index === 0 ? "sm:col-span-2" : ""
       }`}
@@ -62,12 +63,12 @@ function ProjectShowcaseCard({ project, index }: { project: ProjectWithKind; ind
       >
         <div className="flex flex-wrap items-center gap-2">
           {(project.category || project.kind) && (
-            <span className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">
+            <span className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2.5 py-0.5 text-eyebrow font-semibold uppercase tracking-label text-[var(--muted)]">
               {project.category ?? project.kind}
             </span>
           )}
           {project.featured && (
-            <span className="rounded-full bg-[var(--accent)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--accent-fg)]">
+            <span className="rounded-full bg-[var(--accent)] px-2.5 py-0.5 text-eyebrow font-bold uppercase tracking-label text-[var(--accent-fg)]">
               Featured
             </span>
           )}
@@ -96,7 +97,7 @@ function ProjectShowcaseCard({ project, index }: { project: ProjectWithKind; ind
 
         <ul className="mt-5 flex flex-wrap gap-2">
           {project.stack.slice(0, project.featured && index === 0 ? 6 : 4).map((s) => (
-            <li key={s} className="rounded-md border border-[var(--border)] bg-[var(--bg)]/80 px-2 py-0.5 text-[11px] text-[var(--fg)]">
+            <li key={s} className="rounded-md border border-[var(--border)] bg-[var(--bg)]/80 px-2 py-0.5 text-xs text-[var(--fg)]">
               {s}
             </li>
           ))}
@@ -125,7 +126,7 @@ export function ProjectsShowcase({ projects }: { projects: ProjectWithKind[] }) 
     <div className="space-y-10">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent-ink)]">Casos</p>
+          <p className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--accent-ink)]">Casos</p>
           <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Proyectos
           </h1>

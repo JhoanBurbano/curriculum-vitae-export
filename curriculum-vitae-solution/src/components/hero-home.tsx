@@ -15,7 +15,7 @@ export function HeroHome({ data }: { data: CvCopy }) {
 
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:grid-cols-[1.1fr_0.9fr] sm:items-center sm:gap-12 sm:px-6 sm:py-24">
         <div>
-          <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent-ink)]">
+          <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--accent-ink)]">
             Portafolio
           </motion.p>
           <motion.h1

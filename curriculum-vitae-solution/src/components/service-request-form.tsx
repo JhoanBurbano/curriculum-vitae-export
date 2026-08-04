@@ -59,7 +59,7 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[0_20px_50px_rgba(0,0,0,0.18)] sm:p-9 lg:p-10"
+      className="rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-form sm:p-9 lg:p-10"
     >
       <div className="border-b border-[var(--border)] pb-6">
         <h2 className="font-[family-name:var(--font-display)] text-xl font-bold sm:text-2xl">Tu solicitud</h2>
@@ -68,7 +68,7 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
 
       <div className="mt-8 space-y-6">
         <fieldset>
-          <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent-ink)]">Tipo de trabajo</legend>
+          <legend className="text-xs font-semibold uppercase tracking-field text-[var(--accent-ink)]">Tipo de trabajo</legend>
           <label htmlFor="service" className="sr-only">
             Servicio o pack
           </label>

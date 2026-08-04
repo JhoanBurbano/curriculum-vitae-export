@@ -36,7 +36,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl space-y-10 border-t border-[var(--border)] px-4 py-16 sm:px-6 sm:py-20">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent-ink)]">Casos</p>
+            <p className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--accent-ink)]">Casos</p>
             <h2 className="mt-2 font-[family-name:var(--font-display)] text-2xl font-bold sm:text-3xl">Proyectos destacados</h2>
           </div>
           <Link href="/projects" className="text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline">

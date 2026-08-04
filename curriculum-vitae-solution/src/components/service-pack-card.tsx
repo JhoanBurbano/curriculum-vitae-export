@@ -9,10 +9,10 @@ export function ServicePackCard({ pack }: { pack: ServicePack }) {
   const more = pack.includes.length > 4 ? pack.includes.length - 4 : 0;
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--accent)]/30 bg-[var(--surface)] shadow-[0_0_0_1px_rgba(204,255,0,0.05),0_16px_40px_rgba(0,0,0,0.28)]">
+    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--accent)]/30 bg-[var(--surface)] shadow-pack">
       <div className="border-b border-[var(--border)] bg-[var(--bg)]/50 px-5 py-4">
         {pack.badge && (
-          <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--accent-ink)]">{pack.badge}</span>
+          <span className="text-eyebrow font-bold uppercase tracking-label text-[var(--accent-ink)]">{pack.badge}</span>
         )}
         <h2 className={`font-[family-name:var(--font-display)] text-xl font-bold leading-tight tracking-tight ${pack.badge ? "mt-2" : ""}`}>{pack.title}</h2>
         <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-[var(--muted)]">{pack.description}</p>
@@ -30,13 +30,13 @@ export function ServicePackCard({ pack }: { pack: ServicePack }) {
           {more > 0 && <li className="text-xs italic text-[var(--muted)]">+{more} ítems en propuesta</li>}
         </ul>
         <div className="mt-auto space-y-2 border-t border-[var(--border)] pt-4">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)]">Desde</p>
+          <p className="text-eyebrow font-semibold uppercase tracking-wider text-[var(--muted)]">Desde</p>
           <p className="font-[family-name:var(--font-display)] text-2xl font-extrabold text-[var(--accent-ink)]">{pack.startingPrice}</p>
-          {pack.priceNote && <p className="text-[10px] leading-snug text-[var(--muted)]">{pack.priceNote}</p>}
+          {pack.priceNote && <p className="text-eyebrow leading-snug text-[var(--muted)]">{pack.priceNote}</p>}
         </div>
         <div className="rounded-lg border border-[var(--warning-border)] bg-[var(--warning-bg)] p-3">
-          <p className="text-[10px] font-semibold uppercase tracking-wide text-[var(--warning-ink)]">Cotización</p>
-          <p className="mt-1 line-clamp-4 text-[10px] leading-relaxed text-[var(--muted)]">{pack.disclaimer}</p>
+          <p className="text-eyebrow font-semibold uppercase tracking-wide text-[var(--warning-ink)]">Cotización</p>
+          <p className="mt-1 line-clamp-4 text-eyebrow leading-relaxed text-[var(--muted)]">{pack.disclaimer}</p>
         </div>
         <ClarityTrackedLink
           href={href}

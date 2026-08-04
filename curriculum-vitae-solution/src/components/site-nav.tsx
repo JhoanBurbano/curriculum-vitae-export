@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { clarityEvent } from "@/lib/analytics/clarity";
+import { DUR_BASE, EASE_INOUT_QUINT } from "@/lib/motion";
 
 function navClarityEvent(href: string) {
   const suffix = href === "/" ? "home" : href.slice(1).replace(/\//g, "_");
@@ -51,7 +52,7 @@ export function SiteNav() {
           <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-black shadow-sm ring-1 ring-white/15 transition group-hover:ring-[var(--accent)]/50 sm:h-10 sm:w-10">
             <Image src="/js-isotype.png" alt="Isotipo JS — inicio" fill className="object-contain p-1" sizes="40px" priority />
           </span>
-          <span className="hidden text-[10px] font-medium uppercase tracking-[0.35em] text-[var(--muted)] sm:inline">folio</span>
+          <span className="hidden text-eyebrow font-medium uppercase tracking-eyebrow text-[var(--muted)] sm:inline">folio</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -101,7 +102,7 @@ export function SiteNav() {
             initial={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
             animate={{ opacity: 1, clipPath: "circle(150% at 100% 0%)" }}
             exit={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
-            transition={{ duration: 0.45, ease: [0.76, 0, 0.24, 1] }}
+            transition={{ duration: DUR_BASE, ease: EASE_INOUT_QUINT }}
             className="fixed inset-0 top-14 z-40 flex flex-col bg-[var(--bg)] px-6 pb-10 pt-8 md:hidden"
           >
             <nav className="flex flex-1 flex-col justify-center gap-2">
@@ -122,7 +123,7 @@ export function SiteNav() {
                 </motion.div>
               ))}
             </nav>
-            <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Navegación</p>
+            <p className="text-xs uppercase tracking-eyebrow text-[var(--muted)]">Navegación</p>
           </motion.div>
         )}
       </AnimatePresence>
