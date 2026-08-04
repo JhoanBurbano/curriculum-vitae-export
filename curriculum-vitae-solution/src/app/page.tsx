@@ -3,14 +3,17 @@ import { PageMotion } from "@/providers/page-motion";
 import { HeroHome } from "@/components/hero-home";
 import { ExperienceTimeline } from "@/components/experience-timeline";
 import { ProjectGrid } from "@/components/project-grid";
+import { PostCard } from "@/components/blog/post-card";
 import { getCv } from "@/lib/cv";
 import { getAllProjects } from "@/lib/projects";
+import { getAllPosts } from "@/lib/blog";
 
 export default function HomePage() {
   const c = getCv();
   const previewJobs = c.experience.slice(0, 2);
   const featured = getAllProjects(c).filter((p) => p.featured).slice(0, 4);
   const previewProjects = featured.length >= 2 ? featured : getAllProjects(c).slice(0, 4);
+  const latestPosts = getAllPosts().slice(0, 2);
 
   return (
     <PageMotion>
@@ -44,6 +47,23 @@ export default function HomePage() {
           </Link>
         </div>
         <ProjectGrid title="" items={previewProjects} />
+      </section>
+
+      <section className="mx-auto max-w-6xl space-y-10 border-t border-[var(--border)] px-4 py-16 sm:px-6 sm:py-20">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--accent-ink)]">Notas</p>
+            <h2 className="mt-2 font-[family-name:var(--font-display)] text-2xl font-bold sm:text-3xl">Últimas publicaciones</h2>
+          </div>
+          <Link href="/blog" className="text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline">
+            Ver el blog →
+          </Link>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {latestPosts.map((p) => (
+            <PostCard key={p.slug} post={p} />
+          ))}
+        </div>
       </section>
 
       <section className="border-t border-[var(--border)] bg-[var(--surface)] px-4 py-16 sm:px-6 sm:py-20">
