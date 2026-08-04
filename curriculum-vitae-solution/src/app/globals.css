@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* El tema lo controla la clase .dark que pone next-themes, no la preferencia del
+ * sistema. Sin esta declaración, las utilidades `dark:` de Tailwind 4 responden a
+ * prefers-color-scheme y se desincronizan del toggle del sitio. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --bg: #fafafa;
   --fg: #0a0a0a;

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { formatPostDate, getReadingMinutes } from "@/lib/blog";
+import { Badge } from "@/components/ui/badge";
+import { TextLink } from "@/components/ui/text-link";
 import { TOPIC_LABELS, type BlogPost } from "@/types/blog";
 
 /** Card de post. Mismo lenguaje que la card de proyecto: plano, borde 1px, el acento solo en el meta. */
@@ -12,12 +14,7 @@ export function PostCard({ post, featured = false }: { post: BlogPost; featured?
     >
       <div className="flex flex-wrap items-center gap-2">
         {post.topics.map((t) => (
-          <span
-            key={t}
-            className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2.5 py-0.5 text-eyebrow font-semibold uppercase tracking-label text-[var(--muted)]"
-          >
-            {TOPIC_LABELS[t]}
-          </span>
+          <Badge key={t}>{TOPIC_LABELS[t]}</Badge>
         ))}
         <span className="ml-auto text-xs text-[var(--muted)]">{formatPostDate(post.date)}</span>
       </div>
@@ -35,12 +32,9 @@ export function PostCard({ post, featured = false }: { post: BlogPost; featured?
       </p>
 
       <div className="mt-5 flex items-center justify-between gap-3">
-        <Link
-          href={`/blog/${post.slug}`}
-          className="text-sm font-semibold text-[var(--fg)] underline-offset-4 group-hover:text-[var(--accent-ink)] group-hover:underline"
-        >
-          Leer →
-        </Link>
+        <TextLink href={`/blog/${post.slug}`} arrow>
+          Leer
+        </TextLink>
         <span className="text-xs text-[var(--muted)]">{getReadingMinutes(post)} min</span>
       </div>
     </article>

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import type { BlogBlock } from "@/types/blog";
 
 /**
@@ -76,9 +77,9 @@ function Block({ block }: { block: BlogBlock }) {
     case "code":
       return (
         <div className="mt-6 overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)]">
-          <p className="border-b border-[var(--border)] bg-[var(--bg)]/60 px-4 py-2 text-eyebrow font-semibold uppercase tracking-label text-[var(--muted)]">
+          <Eyebrow size="sm" tone="muted" tracking="label" className="border-b border-[var(--border)] bg-[var(--bg)]/60 px-4 py-2">
             {block.lang}
-          </p>
+          </Eyebrow>
           <pre className="overflow-x-auto p-4">
             <code className="font-mono text-xs leading-relaxed text-[var(--fg)]">{block.code}</code>
           </pre>
@@ -95,13 +96,9 @@ function Block({ block }: { block: BlogBlock }) {
               : "border-[var(--accent)]/30 bg-[var(--accent)]/[0.06]"
           }`}
         >
-          <p
-            className={`text-eyebrow font-bold uppercase tracking-label ${
-              warning ? "text-[var(--warning-ink)]" : "text-[var(--accent-ink)]"
-            }`}
-          >
+          <Eyebrow size="sm" weight="bold" tracking="label" tone={warning ? "warning" : "accent"}>
             {block.title}
-          </p>
+          </Eyebrow>
           <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{renderInline(block.text)}</p>
         </aside>
       );

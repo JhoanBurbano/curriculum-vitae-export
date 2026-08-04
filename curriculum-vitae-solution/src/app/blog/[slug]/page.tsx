@@ -7,6 +7,8 @@ import { PostCard } from "@/components/blog/post-card";
 import { getCv } from "@/lib/cv";
 import { formatPostDate, getAllPosts, getPostBySlug, getReadingMinutes, getRelatedPosts } from "@/lib/blog";
 import { TOPIC_LABELS } from "@/types/blog";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import { Badge } from "@/components/ui/badge";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -64,12 +66,9 @@ export default async function BlogPostPage({ params }: Props) {
 
         <div className="mt-6 flex flex-wrap items-center gap-2">
           {post.topics.map((t) => (
-            <span
-              key={t}
-              className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-2.5 py-0.5 text-eyebrow font-semibold uppercase tracking-label text-[var(--muted)]"
-            >
+            <Badge key={t} className="bg-[var(--surface)]">
               {TOPIC_LABELS[t]}
-            </span>
+            </Badge>
           ))}
         </div>
 
@@ -94,7 +93,7 @@ export default async function BlogPostPage({ params }: Props) {
         </p>
 
         <aside className="mt-8 rounded-2xl border border-[var(--accent)]/30 bg-[var(--surface)] p-5 shadow-pack">
-          <p className="text-eyebrow font-bold uppercase tracking-label text-[var(--accent-ink)]">Para llevar</p>
+          <Eyebrow size="sm" weight="bold">Para llevar</Eyebrow>
           <p className="mt-2 leading-relaxed text-[var(--fg)]">{post.takeaway}</p>
         </aside>
 
@@ -102,7 +101,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {post.sources && post.sources.length > 0 && (
           <section className="mt-14 border-t border-[var(--border)] pt-8">
-            <h2 className="text-eyebrow font-bold uppercase tracking-label text-[var(--muted)]">Fuentes</h2>
+            <Eyebrow as="h2" size="sm" weight="bold" tone="muted">Fuentes</Eyebrow>
             <ul className="mt-4 space-y-2">
               {post.sources.map((s) => (
                 <li key={s.url}>

@@ -5,6 +5,9 @@ import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { ProjectWithKind } from "@/lib/projects";
 import { DUR_BASE, EASE_OUT_EXPO, STAGGER } from "@/lib/motion";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import { Chip } from "@/components/ui/chip";
+import { Badge } from "@/components/ui/badge";
 
 type FilterId = "all" | "featured" | "web" | "mobile" | "saas";
 
@@ -63,14 +66,14 @@ function ProjectShowcaseCard({ project, index }: { project: ProjectWithKind; ind
       >
         <div className="flex flex-wrap items-center gap-2">
           {(project.category || project.kind) && (
-            <span className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2.5 py-0.5 text-eyebrow font-semibold uppercase tracking-label text-[var(--muted)]">
+            <Badge>
               {project.category ?? project.kind}
-            </span>
+            </Badge>
           )}
           {project.featured && (
-            <span className="rounded-full bg-[var(--accent)] px-2.5 py-0.5 text-eyebrow font-bold uppercase tracking-label text-[var(--accent-fg)]">
+            <Badge variant="solid">
               Featured
-            </span>
+            </Badge>
           )}
           <span className="ml-auto text-xs text-[var(--muted)]">{project.year}</span>
         </div>
@@ -97,9 +100,9 @@ function ProjectShowcaseCard({ project, index }: { project: ProjectWithKind; ind
 
         <ul className="mt-5 flex flex-wrap gap-2">
           {project.stack.slice(0, project.featured && index === 0 ? 6 : 4).map((s) => (
-            <li key={s} className="rounded-md border border-[var(--border)] bg-[var(--bg)]/80 px-2 py-0.5 text-xs text-[var(--fg)]">
+            <Chip key={s} className="bg-[var(--bg)]/80">
               {s}
-            </li>
+            </Chip>
           ))}
         </ul>
 
@@ -126,7 +129,7 @@ export function ProjectsShowcase({ projects }: { projects: ProjectWithKind[] }) 
     <div className="space-y-10">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--accent-ink)]">Casos</p>
+          <Eyebrow>Casos</Eyebrow>
           <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Proyectos
           </h1>

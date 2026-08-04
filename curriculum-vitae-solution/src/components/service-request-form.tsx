@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { clarityEvent, claritySetTag, clarityUpgrade } from "@/lib/analytics/clarity";
 import type { CvService } from "@/types/cv";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import { Message } from "@/components/ui/message";
 
 const initial = { name: "", email: "", company: "", message: "" };
 
@@ -68,7 +70,7 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
 
       <div className="mt-8 space-y-6">
         <fieldset>
-          <legend className="text-xs font-semibold uppercase tracking-field text-[var(--accent-ink)]">Tipo de trabajo</legend>
+          <Eyebrow as="legend" tracking="field">Tipo de trabajo</Eyebrow>
           <label htmlFor="service" className="sr-only">
             Servicio o pack
           </label>
@@ -155,10 +157,10 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
         </div>
 
         {status === "ok" && (
-          <p className="rounded-xl border border-[var(--accent)]/30 bg-[var(--accent)]/10 px-4 py-3 text-sm font-medium text-[var(--fg)]">Listo. Revisa tu bandeja en las próximas horas; si no llega nada, revisa spam.</p>
+          <Message>Listo. Revisa tu bandeja en las próximas horas; si no llega nada, revisa spam.</Message>
         )}
         {status === "err" && (
-          <p className="rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-600 dark:text-red-400">{errMsg}</p>
+          <Message tone="error">{errMsg}</Message>
         )}
 
         <div className="flex flex-col gap-3 border-t border-[var(--border)] pt-6 sm:flex-row sm:items-center sm:justify-between">

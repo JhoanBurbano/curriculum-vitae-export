@@ -7,7 +7,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { clarityEvent } from "@/lib/analytics/clarity";
-import { DUR_BASE, EASE_INOUT_QUINT } from "@/lib/motion";
+import { DUR_BASE, DUR_FAST, EASE_INOUT_QUINT, STAGGER } from "@/lib/motion";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import { IconButton } from "@/components/ui/icon-button";
 
 function navClarityEvent(href: string) {
   const suffix = href === "/" ? "home" : href.slice(1).replace(/\//g, "_");
@@ -53,7 +55,7 @@ export function SiteNav() {
           <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-black shadow-sm ring-1 ring-white/15 transition group-hover:ring-[var(--accent)]/50 sm:h-10 sm:w-10">
             <Image src="/js-isotype.png" alt="Isotipo JS — inicio" fill className="object-contain p-1" sizes="40px" priority />
           </span>
-          <span className="hidden text-eyebrow font-medium uppercase tracking-eyebrow text-[var(--muted)] sm:inline">folio</span>
+          <Eyebrow as="span" size="sm" weight="medium" tone="muted" className="hidden sm:inline">folio</Eyebrow>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -84,17 +86,17 @@ export function SiteNav() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <button
-            type="button"
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-[var(--border)] bg-[var(--surface)] md:hidden"
+          <IconButton
+            shape="square"
+            label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
-            aria-label="Abrir menú"
+            className="flex-col gap-1.5 md:hidden"
             onClick={() => setOpen((v) => !v)}
           >
             <motion.span animate={{ rotate: open ? 45 : 0, y: open ? 6 : 0 }} className="h-0.5 w-5 bg-[var(--fg)]" />
             <motion.span animate={{ opacity: open ? 0 : 1 }} className="h-0.5 w-5 bg-[var(--fg)]" />
             <motion.span animate={{ rotate: open ? -45 : 0, y: open ? -6 : 0 }} className="h-0.5 w-5 bg-[var(--fg)]" />
-          </button>
+          </IconButton>
         </div>
       </div>
 
@@ -113,7 +115,7 @@ export function SiteNav() {
                   key={l.href}
                   initial={{ opacity: 0, x: 40 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.05 * i, duration: 0.35 }}
+                  transition={{ delay: STAGGER * i, duration: DUR_FAST }}
                 >
                   <Link
                     href={l.href}
@@ -125,7 +127,7 @@ export function SiteNav() {
                 </motion.div>
               ))}
             </nav>
-            <p className="text-xs uppercase tracking-eyebrow text-[var(--muted)]">Navegación</p>
+            <Eyebrow tone="muted">Navegación</Eyebrow>
           </motion.div>
         )}
       </AnimatePresence>

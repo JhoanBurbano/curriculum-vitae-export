@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageMotion } from "@/providers/page-motion";
 import { ServicePackCard } from "@/components/service-pack-card";
 import { getCv } from "@/lib/cv";
+import { Eyebrow } from "@/components/ui/eyebrow";
 
 export const metadata: Metadata = {
   title: "Servicios",
@@ -18,7 +19,7 @@ export default function ServicesPage() {
     <PageMotion>
       <div className="border-b border-[var(--border)] bg-[var(--surface)]/40">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
-          <p className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--accent-ink)]">Oferta</p>
+          <Eyebrow>Oferta</Eyebrow>
           <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Servicios</h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
             Tres líneas de entrada con precio inicial y disclaimer de cotización; debajo, el catálogo para proyectos a medida (mobile, plataformas, AI, fintech).

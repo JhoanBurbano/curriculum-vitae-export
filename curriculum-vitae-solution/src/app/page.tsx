@@ -7,6 +7,8 @@ import { PostCard } from "@/components/blog/post-card";
 import { getCv } from "@/lib/cv";
 import { getAllProjects } from "@/lib/projects";
 import { getAllPosts } from "@/lib/blog";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import { TextLink } from "@/components/ui/text-link";
 
 export default function HomePage() {
   const c = getCv();
@@ -23,9 +25,9 @@ export default function HomePage() {
         <div className="max-w-3xl">
           <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold sm:text-3xl">Resumen profesional</h2>
           <p className="mt-4 text-base leading-relaxed text-[var(--muted)] sm:text-lg">{c.professionalSummary}</p>
-          <Link href="/experience" className="mt-6 inline-flex text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline">
+          <TextLink href="/experience" className="mt-6 inline-flex">
             Ver toda la experiencia
-          </Link>
+          </TextLink>
         </div>
       </section>
 
@@ -39,12 +41,12 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl space-y-10 border-t border-[var(--border)] px-4 py-16 sm:px-6 sm:py-20">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--accent-ink)]">Casos</p>
+            <Eyebrow>Casos</Eyebrow>
             <h2 className="mt-2 font-[family-name:var(--font-display)] text-2xl font-bold sm:text-3xl">Proyectos destacados</h2>
           </div>
-          <Link href="/projects" className="text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline">
-            Ver todos →
-          </Link>
+          <TextLink href="/projects" arrow>
+            Ver todos
+          </TextLink>
         </div>
         <ProjectGrid title="" items={previewProjects} />
       </section>
@@ -52,12 +54,12 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl space-y-10 border-t border-[var(--border)] px-4 py-16 sm:px-6 sm:py-20">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--accent-ink)]">Notas</p>
+            <Eyebrow>Notas</Eyebrow>
             <h2 className="mt-2 font-[family-name:var(--font-display)] text-2xl font-bold sm:text-3xl">Últimas publicaciones</h2>
           </div>
-          <Link href="/blog" className="text-sm font-semibold text-[var(--accent-ink)] underline-offset-4 hover:underline">
-            Ver el blog →
-          </Link>
+          <TextLink href="/blog" arrow>
+            Ver el blog
+          </TextLink>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">
           {latestPosts.map((p) => (

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ClarityTrackedAnchor } from "@/components/clarity-tracked-anchor";
 import type { ProjectWithKind } from "@/lib/projects";
 import { EASE_OUT_EXPO } from "@/lib/motion";
+import { Eyebrow } from "@/components/ui/eyebrow";
 
 const ease = EASE_OUT_EXPO;
 
@@ -31,7 +32,7 @@ function SectionBlock({
       transition={{ duration: 0.45, delay, ease }}
       className="scroll-mt-24"
     >
-      <p className="text-eyebrow font-bold uppercase tracking-eyebrow text-[var(--accent-ink)]">{eyebrow}</p>
+      <Eyebrow size="sm" weight="bold">{eyebrow}</Eyebrow>
       <h2 className="mt-2 font-[family-name:var(--font-display)] text-xl font-bold tracking-tight sm:text-2xl">{title}</h2>
       <div className="mt-4 text-base leading-relaxed text-[var(--muted)] sm:text-lg">{children}</div>
     </motion.section>
@@ -152,7 +153,7 @@ export function ProjectDetailView({
           </SectionBlock>
 
           <motion.div initial={fadeUp.initial} animate={fadeUp.animate} transition={{ duration: 0.45, delay: 0.28, ease }}>
-            <p className="text-eyebrow font-bold uppercase tracking-eyebrow text-[var(--accent-ink)]">Stack</p>
+            <Eyebrow size="sm" weight="bold">Stack</Eyebrow>
             <ul className="mt-4 flex flex-wrap gap-2">
               {project.stack.map((s) => (
                 <li key={s} className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1.5 text-xs font-medium">
@@ -170,7 +171,7 @@ export function ProjectDetailView({
             transition={{ duration: 0.45, delay: 0.32, ease }}
             className="mt-20 border-t border-[var(--border)] pt-12"
           >
-            <p className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--muted)]">También mira</p>
+            <Eyebrow tone="muted">También mira</Eyebrow>
             <ul className="mt-6 grid gap-4 sm:grid-cols-2">
               {related.map((r) => (
                 <li key={r.slug}>
@@ -178,7 +179,7 @@ export function ProjectDetailView({
                     href={`/projects/${r.slug}`}
                     className="group block rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 transition hover:border-[var(--accent)]/50"
                   >
-                    <p className="text-eyebrow font-semibold uppercase tracking-wider text-[var(--accent-ink)]">{r.category ?? r.kind}</p>
+                    <Eyebrow size="sm" tracking="label">{r.category ?? r.kind}</Eyebrow>
                     <p className="mt-2 font-[family-name:var(--font-display)] text-lg font-bold group-hover:text-[var(--accent-ink)]">{r.title}</p>
                     <p className="mt-2 line-clamp-2 text-sm text-[var(--muted)]">{r.description}</p>
                   </Link>

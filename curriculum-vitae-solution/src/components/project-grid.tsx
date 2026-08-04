@@ -4,6 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CvProject } from "@/types/cv";
 import { DUR_FAST, EASE_OUT_EXPO, STAGGER } from "@/lib/motion";
+import { Chip } from "@/components/ui/chip";
+import { Badge } from "@/components/ui/badge";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import { TextLink } from "@/components/ui/text-link";
 
 function ProjectCard({ p, index }: { p: CvProject; index: number }) {
   return (
@@ -20,22 +24,24 @@ function ProjectCard({ p, index }: { p: CvProject; index: number }) {
             {p.title}
           </Link>
         </h3>
-        <span className="shrink-0 rounded-full bg-[var(--bg)] px-2 py-0.5 text-xs text-[var(--muted)]">{p.year}</span>
+        <Badge variant="quiet">{p.year}</Badge>
       </div>
       {(p.highlight || p.category) && (
-        <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-[var(--accent-ink)]">{p.highlight ?? p.category}</p>
+        <Eyebrow tracking="label" className="mt-2">
+          {p.highlight ?? p.category}
+        </Eyebrow>
       )}
       <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--muted)]">{p.description}</p>
       <ul className="mt-4 flex flex-wrap gap-2">
         {p.stack.slice(0, 4).map((s) => (
-          <li key={s} className="rounded-md border border-[var(--border)] px-2 py-0.5 text-xs text-[var(--fg)]">
+          <Chip key={s}>
             {s}
-          </li>
+          </Chip>
         ))}
       </ul>
-      <Link href={`/projects/${p.slug}`} className="mt-5 text-sm font-semibold text-[var(--fg)] underline-offset-4 hover:text-[var(--accent-ink)] hover:underline">
-        Ver caso →
-      </Link>
+      <TextLink href={`/projects/${p.slug}`} arrow className="mt-5">
+        Ver caso
+      </TextLink>
     </motion.article>
   );
 }

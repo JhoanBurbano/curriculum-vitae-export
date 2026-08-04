@@ -1,36 +1,36 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { clarityEvent } from "@/lib/analytics/clarity";
+import { IconButton } from "@/components/ui/icon-button";
 
+/**
+ * Toggle de tema.
+ *
+ * Ya no usa un flag `mounted` en un efecto. Antes hacía falta porque el glifo
+ * dependía de `resolvedTheme`, que en el servidor es `undefined`, y pintarlo
+ * distinto en cliente rompía la hidratación. Ahora se renderizan los dos glifos y
+ * la clase `.dark` decide cuál se ve: el markup del servidor y del cliente son
+ * idénticos, así que desaparecen el estado, el efecto y el parpadeo del
+ * placeholder — y con ellos el error de lint por `setState` dentro de un efecto.
+ */
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)]" aria-hidden />
-    );
-  }
-
-  const isDark = resolvedTheme === "dark";
 
   return (
-    <button
-      type="button"
+    <IconButton
+      label="Cambiar tema"
       onClick={() => {
         clarityEvent("theme_toggle");
-        setTheme(isDark ? "light" : "dark");
+        setTheme(resolvedTheme === "dark" ? "light" : "dark");
       }}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-sm transition hover:border-[var(--accent)] hover:text-[var(--accent-ink)]"
-      aria-label={isDark ? "Activar tema claro" : "Activar tema oscuro"}
     >
-      {isDark ? "☀" : "☾"}
-    </button>
+      <span aria-hidden className="dark:hidden">
+        ☾
+      </span>
+      <span aria-hidden className="hidden dark:inline">
+        ☀
+      </span>
+    </IconButton>
   );
 }

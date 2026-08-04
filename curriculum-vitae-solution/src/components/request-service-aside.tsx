@@ -1,11 +1,12 @@
 import { ClarityTrackedLink } from "@/components/clarity-tracked-link";
 import type { ServicePack } from "@/types/cv";
+import { Eyebrow } from "@/components/ui/eyebrow";
 
 export function RequestServiceAside({ packs }: { packs: ServicePack[] }) {
   return (
     <aside className="flex flex-col gap-6 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-eyebrow text-[var(--accent-ink)]">Cómo funciona</p>
+        <Eyebrow>Cómo funciona</Eyebrow>
         <ol className="mt-4 space-y-4 text-sm text-[var(--muted)]">
           <li className="flex gap-3">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-xs font-bold text-[var(--accent-fg)]">1</span>
