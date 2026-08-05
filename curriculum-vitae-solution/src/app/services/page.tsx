@@ -24,6 +24,16 @@ export default function ServicesPage() {
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
             Tres líneas de entrada con precio inicial y disclaimer de cotización; debajo, el catálogo para proyectos a medida (mobile, plataformas, AI, fintech).
           </p>
+          {c.header.bookingUrl && (
+            <a
+              href={c.header.bookingUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-7 inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-bold text-[var(--accent-fg)] transition hover:brightness-110"
+            >
+              Agendar 30 min para cerrar el rango
+            </a>
+          )}
           <dl className="mt-10 grid gap-6 border-t border-[var(--border)] pt-10 sm:grid-cols-3">
             <div>
               <dt className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">Modalidad</dt>

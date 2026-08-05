@@ -23,7 +23,9 @@ const links = [
   { href: "/blog", label: "Blog" },
   { href: "/services", label: "Servicios" },
   { href: "/request-service", label: "Solicitar" },
-  { href: "/cv", label: "CV" },
+  // El CV vive en el footer, no aquí. Compitiendo con la oferta comercial en el
+  // nav, un comprador leía "busco empleo" y un reclutador leía "vendo packs":
+  // cada audiencia descontaba la señal de la otra.
 ] as const;
 
 export function SiteNav() {

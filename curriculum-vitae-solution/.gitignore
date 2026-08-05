@@ -32,6 +32,9 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# ...menos la plantilla: documenta qué variables necesita el sitio para que el
+# formulario de contacto entregue los leads. No contiene valores.
+!.env.example
 
 # vercel
 .vercel

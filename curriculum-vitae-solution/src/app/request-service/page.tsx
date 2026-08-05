@@ -17,6 +17,8 @@ function FormFallback() {
 
 export default function RequestServicePage() {
   const c = getCv();
+  const contactEmail =
+    c.header.contactLinks.find((l) => l.url.startsWith("mailto:"))?.url.replace("mailto:", "") ?? "";
   return (
     <PageMotion>
       <div className="border-b border-[var(--border)] bg-[var(--surface)]/35">
@@ -36,7 +38,7 @@ export default function RequestServicePage() {
           </div>
           <div className="lg:col-span-7 lg:order-1">
             <Suspense fallback={<FormFallback />}>
-              <ServiceRequestForm services={c.services} />
+              <ServiceRequestForm services={c.services} contactEmail={contactEmail} />
             </Suspense>
           </div>
         </div>

@@ -7,17 +7,39 @@ import type { CvService } from "@/types/cv";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Message } from "@/components/ui/message";
 
-const initial = { name: "", email: "", company: "", message: "" };
+const initial = { name: "", email: "", company: "", budget: "", timeline: "", message: "" };
+
+/** Rangos de presupuesto. Calificar aquí evita una ronda de correos por cada lead. */
+const BUDGETS = ["Menos de USD 3k", "USD 3k – 8k", "USD 8k – 20k", "Más de USD 20k", "Todavía no lo sé"];
+const TIMELINES = ["Lo antes posible", "Este mes", "Próximo trimestre", "Solo explorando"];
 
 const messagePlaceholder = `Ej.: Objetivo del proyecto, fecha deseada, presupuesto orientativo, enlaces (Figma, web actual), integraciones necesarias (CRM, pagos, analytics)…`;
 
-export function ServiceRequestForm({ services }: { services: CvService[] }) {
+/** Compone un mailto con la solicitud ya redactada: la red de seguridad del funnel. */
+function buildMailto(d: {
+  name: string; email: string; company: string; budget: string; timeline: string; message: string; serviceLabel: string; contactEmail: string;
+}): string {
+  const body = [
+    `Servicio: ${d.serviceLabel}`,
+    `Nombre: ${d.name}`,
+    `Email: ${d.email}`,
+    d.company ? `Empresa: ${d.company}` : "",
+    d.budget ? `Presupuesto: ${d.budget}` : "",
+    d.timeline ? `Plazo: ${d.timeline}` : "",
+    "",
+    d.message,
+  ].filter(Boolean).join("\n");
+  return `mailto:${d.contactEmail}?subject=${encodeURIComponent(`Solicitud: ${d.serviceLabel}`)}&body=${encodeURIComponent(body)}`;
+}
+
+export function ServiceRequestForm({ services, contactEmail }: { services: CvService[]; contactEmail: string }) {
   const searchParams = useSearchParams();
   const defaultService = searchParams.get("service") ?? "";
   const [serviceId, setServiceId] = useState(defaultService && services.some((s) => s.id === defaultService) ? defaultService : services[0]?.id ?? "");
   const [form, setForm] = useState(initial);
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "err">("idle");
   const [errMsg, setErrMsg] = useState("");
+  const [fallbackHref, setFallbackHref] = useState("");
 
   const selected = useMemo(() => services.find((s) => s.id === serviceId), [services, serviceId]);
 
@@ -34,13 +56,21 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
           name: form.name.trim(),
           email: form.email.trim(),
           company: form.company.trim(),
+          budget: form.budget,
+          timeline: form.timeline,
           message: form.message.trim(),
         }),
       });
-      const data = (await res.json().catch(() => ({}))) as { error?: string };
+      const data = (await res.json().catch(() => ({}))) as { error?: string; code?: string };
       if (!res.ok) {
         setStatus("err");
-        setErrMsg(data.error ?? "No se pudo enviar. Intenta de nuevo.");
+        setErrMsg(
+          data.code === "unconfigured"
+            ? "El envío automático no está disponible ahora mismo."
+            : data.error ?? "No se pudo enviar. Intenta de nuevo.",
+        );
+        // Nunca dejar caer la solicitud: se ofrece el mismo contenido por correo.
+        setFallbackHref(buildMailto({ ...form, serviceLabel: selected?.title ?? serviceId, contactEmail }));
         clarityEvent("service_request_error");
         claritySetTag("service_request_last_error", String(res.status));
         clarityUpgrade("service_request_http_error");
@@ -53,6 +83,7 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
     } catch {
       setStatus("err");
       setErrMsg("Error de red.");
+      setFallbackHref(buildMailto({ ...form, serviceLabel: selected?.title ?? serviceId, contactEmail }));
       clarityEvent("service_request_error");
       clarityUpgrade("service_request_network_error");
     }
@@ -139,6 +170,43 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
           />
         </div>
 
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div>
+            <label htmlFor="budget" className="text-sm font-semibold text-[var(--fg)]">
+              Presupuesto aproximado
+            </label>
+            <select
+              id="budget"
+              name="budget"
+              value={form.budget}
+              onChange={(e) => setForm((f) => ({ ...f, budget: e.target.value }))}
+              className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm outline-none ring-[var(--accent)] focus:ring-2"
+            >
+              <option value="">Prefiero no decirlo</option>
+              {BUDGETS.map((b) => (
+                <option key={b} value={b}>{b}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="timeline" className="text-sm font-semibold text-[var(--fg)]">
+              ¿Para cuándo?
+            </label>
+            <select
+              id="timeline"
+              name="timeline"
+              value={form.timeline}
+              onChange={(e) => setForm((f) => ({ ...f, timeline: e.target.value }))}
+              className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm outline-none ring-[var(--accent)] focus:ring-2"
+            >
+              <option value="">Sin fecha definida</option>
+              {TIMELINES.map((t) => (
+                <option key={t} value={t}>{t}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
         <div>
           <label htmlFor="message" className="text-sm font-semibold text-[var(--fg)]">
             Mensaje
@@ -160,7 +228,18 @@ export function ServiceRequestForm({ services }: { services: CvService[] }) {
           <Message>Listo. Revisa tu bandeja en las próximas horas; si no llega nada, revisa spam.</Message>
         )}
         {status === "err" && (
-          <Message tone="error">{errMsg}</Message>
+          <Message tone="error">
+            {errMsg}{" "}
+            {fallbackHref && (
+              <>
+                Tu solicitud no se perdió:{" "}
+                <a href={fallbackHref} className="font-semibold underline underline-offset-4" onClick={() => clarityEvent("service_request_mailto_fallback")}>
+                  envíala por correo con un clic
+                </a>
+                . Se abre con todo el contenido ya redactado.
+              </>
+            )}
+          </Message>
         )}
 
         <div className="flex flex-col gap-3 border-t border-[var(--border)] pt-6 sm:flex-row sm:items-center sm:justify-between">

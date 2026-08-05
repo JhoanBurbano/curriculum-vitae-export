@@ -1,21 +1,27 @@
 {
   "seo": {
     "title": "Jhoan Burbano — AI Product Engineer & Mobile",
-    "description": "AI Product Engineer con 8+ años en producto real: mobile, frontend, backend, fintech y orquestación multi-agente. Portafolio, servicios y CV exportable.",
+    "description": "AI Product Engineer: llevo sistemas agentic y productos móviles de la demo a producción en contextos con dinero real — pagos, riesgo, fintech. Casos, servicios y CV.",
     "siteUrl": "https://www.jsburbano.dev",
     "locale": "es_CO",
     "keywords": [
       "AI Product Engineer",
+      "multi-agent systems",
+      "agentic engineering",
       "React Native",
       "Next.js",
-      "Fintech",
-      "Prompt Engineering",
-      "Colombia"
+      "fintech",
+      "pagos",
+      "prompt engineering"
     ]
   },
   "heroAside": {
     "variant": "rotate",
-    "rotateLines": ["AI + mobile", "Fintech & pagos", "Multi-agent"],
+    "rotateLines": [
+      "AI + mobile",
+      "Fintech & pagos",
+      "Multi-agent"
+    ],
     "rotateIntervalMs": 3000
   },
   "header": {
@@ -25,10 +31,21 @@
     "image": "/photo.png",
     "contactLine": "Colombia | www.jsburbano.dev | joans.burbano@gmail.com | linkedin.com/in/jsburbano",
     "contactLinks": [
-      { "label": "www.jsburbano.dev", "url": "https://www.jsburbano.dev" },
-      { "label": "joans.burbano@gmail.com", "url": "mailto:joans.burbano@gmail.com" },
-      { "label": "linkedin.com/in/jsburbano", "url": "https://linkedin.com/in/jsburbano" }
-    ]
+      {
+        "label": "www.jsburbano.dev",
+        "url": "https://www.jsburbano.dev"
+      },
+      {
+        "label": "joans.burbano@gmail.com",
+        "url": "mailto:joans.burbano@gmail.com"
+      },
+      {
+        "label": "linkedin.com/in/jsburbano",
+        "url": "https://linkedin.com/in/jsburbano"
+      }
+    ],
+    "promise": "Llevo sistemas con IA de la demo a producción, en productos que mueven dinero real: pagos, riesgo y operaciones. 8+ años construyendo, no opinando.",
+    "bookingUrl": ""
   },
   "professionalSummary": "AI Product Engineer with 8+ years of experience building real-world products across mobile, frontend, and backend systems. Specialized in prompt engineering, multi-agent orchestration, and AI-powered product execution. Strong fintech background integrating payment systems and handling transactional flows in production. Focused on turning AI capabilities into scalable, reliable, and production-ready systems.",
   "softSkills": [
@@ -99,160 +116,115 @@
   "tools": [
     {
       "category": "AI Agents & Dev",
-      "items": ["Cursor", "Claude Code", "ChatGPT", "Gemini"]
+      "items": [
+        "Cursor",
+        "Claude Code",
+        "ChatGPT",
+        "Gemini"
+      ]
     },
     {
       "category": "GenAI Creative",
-      "items": ["Midjourney", "Firefly"]
+      "items": [
+        "Midjourney",
+        "Firefly"
+      ]
     },
     {
       "category": "Payment Gateways",
-      "items": ["Stripe", "MercadoPago", "Kushki", "Conekta"]
+      "items": [
+        "Stripe",
+        "MercadoPago",
+        "Kushki",
+        "Conekta"
+      ]
     },
     {
       "category": "Testing",
-      "items": ["Jest", "React Testing Library", "Cypress", "Playwright"]
+      "items": [
+        "Jest",
+        "React Testing Library",
+        "Cypress",
+        "Playwright"
+      ]
     },
     {
       "category": "CI/CD",
-      "items": ["GitHub Actions", "Bitbucket Pipelines", "CircleCI"]
+      "items": [
+        "GitHub Actions",
+        "Bitbucket Pipelines",
+        "CircleCI"
+      ]
     }
   ],
-"experience": [
-
-  {
-
-    "role": "AI Product Engineer (Self-Directed)",
-
-    "company": "Freelance",
-
-    "period": "2023 - Present",
-
-    "description": "Designed and orchestrated multi-agent AI systems with defined roles, rules, and execution flows. Applied advanced prompt and context engineering to build AI workflows for code generation, refactoring, documentation, and product development. Focused on turning AI capabilities into real, production-ready systems using tools like OpenAI, Claude, Gemini, Cursor, and Windsurf."
-
-  },
-
-  {
-
-    "role": "Senior Mobile Engineer (Team Lead)",
-
-    "company": "Cheaf",
-
-    "period": "2024 - Present",
-
-    "description": "Led development of mobile applications handling real transactional flows (checkout, delivery, validation). Applied AI-assisted workflows to accelerate development, refactoring, and feature delivery. Improved onboarding performance and reduced friction in critical flows. Increased reliability through better error handling and system design."
-
-  },
-
-  {
-
-    "role": "Mobile Engineer (Team Lead)",
-
-    "company": "Teamcore",
-
-    "period": "2024 - 2025",
-
-    "description": "Developed mobile applications for data-driven operational systems in retail environments. Worked with execution workflows and performance-critical features. Leveraged AI tools for code generation, refactoring, and documentation. Focused on scalability, performance, and reliability in real-world conditions."
-
-  },
-
-  {
-
-    "role": "Product Engineer",
-
-    "company": "LingoQuesto",
-
-    "period": "2025 (MVP launch)",
-
-    "description": "Led product vision, design, and development of digital solutions focused on real user impact. Combined UX thinking with high-level technical execution to build scalable products aligned with market needs."
-
-  },
-
-  {
-
-    "role": "Senior Software Developer (Tech Lead)",
-
-    "company": "Somos Inmobiliarios",
-
-    "period": "2025 (Platform launch)",
-
-    "description": "Led development of a scalable real estate platform combining product thinking, automation, and system design. Built features for sales, learning, and growth. Applied AI-assisted workflows to accelerate delivery, refactor systems, and generate documentation."
-
-  },
-
-  {
-
-    "role": "Frontend Engineer (Fintech)",
-
-    "company": "Aplazo",
-
-    "period": "2022 - 2023",
-
-    "description": "Owned and maintained payment and risk flows in a BNPL fintech environment. Implemented transaction validation logic and financial systems. Refactored critical modules aligned with evolving payment requirements. Focused on reliability and edge-case handling in financial products."
-
-  },
-
-  {
-
-    "role": "Team Lead",
-
-    "company": "SIA",
-
-    "period": "2022 - 2023",
-
-    "description": "Led frontend development team, planning sprints, tracking progress, and aligning technical execution with business requirements. Oversaw feature delivery and refactoring strategies to ensure product success."
-
-  },
-
-  {
-
-    "role": "Software Developer",
-
-    "company": "e-volution",
-
-    "period": "2021 - 2022",
-
-    "description": "Led three fintech projects focused on payment systems and user experience. Built and maintained transactional systems, integrating payment gateways and improving UX in financial flows."
-
-  },
-
-  {
-
-    "role": "Teaching Assistant (Full Stack)",
-
-    "company": "Henry",
-
-    "period": "2021 - 2022",
-
-    "description": "Supported students in a full-stack bootcamp, guiding them through core concepts, exercises, and collaborative development practices like pair programming. Helped improve learning processes and technical understanding."
-
-  },
-
-  {
-
-    "role": "Full Stack Engineer",
-
-    "company": "Iuvity",
-
-    "period": "2020 - 2021",
-
-    "description": "Developed web and mobile solutions with focus on scalable architecture and user experience. Worked on fullstack features and integrations across different products."
-
-  },
-
-  {
-
-    "role": "Fullstack Engineer (Freelance)",
-
-    "company": "JSBurbano",
-
-    "period": "2016 - 2020",
-
-    "description": "Built multiple fintech-oriented products and transactional systems across web and mobile platforms. Implemented payment flows, transaction validation logic, and data-driven dashboards. Delivered end-to-end solutions from product definition to production."
-
-  }
-
-],
+  "experience": [
+    {
+      "role": "AI Product Engineer (Self-Directed)",
+      "company": "Freelance",
+      "period": "2023 - Present",
+      "description": "Designed and orchestrated multi-agent AI systems with defined roles, rules, and execution flows. Applied advanced prompt and context engineering to build AI workflows for code generation, refactoring, documentation, and product development. Focused on turning AI capabilities into real, production-ready systems using tools like OpenAI, Claude, Gemini, Cursor, and Windsurf."
+    },
+    {
+      "role": "Senior Mobile Engineer (Team Lead)",
+      "company": "Cheaf",
+      "period": "2024 - Present",
+      "description": "Led development of mobile applications handling real transactional flows (checkout, delivery, validation). Applied AI-assisted workflows to accelerate development, refactoring, and feature delivery. Improved onboarding performance and reduced friction in critical flows. Increased reliability through better error handling and system design."
+    },
+    {
+      "role": "Mobile Engineer (Team Lead)",
+      "company": "Teamcore",
+      "period": "2024 - 2025",
+      "description": "Developed mobile applications for data-driven operational systems in retail environments. Worked with execution workflows and performance-critical features. Leveraged AI tools for code generation, refactoring, and documentation. Focused on scalability, performance, and reliability in real-world conditions."
+    },
+    {
+      "role": "Product Engineer",
+      "company": "LingoQuesto",
+      "period": "2025 (MVP launch)",
+      "description": "Led product vision, design, and development of digital solutions focused on real user impact. Combined UX thinking with high-level technical execution to build scalable products aligned with market needs."
+    },
+    {
+      "role": "Senior Software Developer (Tech Lead)",
+      "company": "Somos Inmobiliarios",
+      "period": "2025 (Platform launch)",
+      "description": "Led development of a scalable real estate platform combining product thinking, automation, and system design. Built features for sales, learning, and growth. Applied AI-assisted workflows to accelerate delivery, refactor systems, and generate documentation."
+    },
+    {
+      "role": "Frontend Engineer (Fintech)",
+      "company": "Aplazo",
+      "period": "2022 - 2023",
+      "description": "Owned and maintained payment and risk flows in a BNPL fintech environment. Implemented transaction validation logic and financial systems. Refactored critical modules aligned with evolving payment requirements. Focused on reliability and edge-case handling in financial products."
+    },
+    {
+      "role": "Team Lead",
+      "company": "SIA",
+      "period": "2022 - 2023",
+      "description": "Led frontend development team, planning sprints, tracking progress, and aligning technical execution with business requirements. Oversaw feature delivery and refactoring strategies to ensure product success."
+    },
+    {
+      "role": "Software Developer",
+      "company": "e-volution",
+      "period": "2021 - 2022",
+      "description": "Led three fintech projects focused on payment systems and user experience. Built and maintained transactional systems, integrating payment gateways and improving UX in financial flows."
+    },
+    {
+      "role": "Teaching Assistant (Full Stack)",
+      "company": "Henry",
+      "period": "2021 - 2022",
+      "description": "Supported students in a full-stack bootcamp, guiding them through core concepts, exercises, and collaborative development practices like pair programming. Helped improve learning processes and technical understanding."
+    },
+    {
+      "role": "Full Stack Engineer",
+      "company": "Iuvity",
+      "period": "2020 - 2021",
+      "description": "Developed web and mobile solutions with focus on scalable architecture and user experience. Worked on fullstack features and integrations across different products."
+    },
+    {
+      "role": "Fullstack Engineer (Freelance)",
+      "company": "JSBurbano",
+      "period": "2016 - 2020",
+      "description": "Built multiple fintech-oriented products and transactional systems across web and mobile platforms. Implemented payment flows, transaction validation logic, and data-driven dashboards. Delivered end-to-end solutions from product definition to production."
+    }
+  ],
   "projects": {
     "web": [
       {
@@ -264,7 +236,13 @@
           "El producto incluye web de academia, admin de plataforma (planes, precios por disciplina) y documentación Docusaurus para onboarding de operadores — no solo código, handover de negocio.",
           "Como AI Product Engineer, prioricé flujos cobrables y estados de estudiante/pago antes que features cosméticas: lo que genera mora o fricción de cobro se modeló como reglas, no como excepciones en UI."
         ],
-        "stack": ["Next.js", "Express", "Prisma", "Multi-tenant", "Docusaurus"],
+        "stack": [
+          "Next.js",
+          "Express",
+          "Prisma",
+          "Multi-tenant",
+          "Docusaurus"
+        ],
         "year": "2026",
         "highlight": "SaaS ready",
         "category": "SaaS",
@@ -279,7 +257,8 @@
           "Landing en academy-manager.jsburbano.dev + cliente real en platform.caucanadetaekwondo.com"
         ],
         "webUrl": "https://academy-manager.jsburbano.dev",
-        "repoUrl": "https://github.com/JhoanBurbano/my-academy"
+        "repoUrl": "https://github.com/JhoanBurbano/my-academy",
+        "spotlight": true
       },
       {
         "slug": "fintru",
@@ -290,7 +269,12 @@
           "La landing empuja early access, creencia de producto y pricing de founding members — diseño de go-to-market, no solo UI.",
           "El mensaje evita tip lists: control diario, runway en meses y alertas antes de desviarse."
         ],
-        "stack": ["Next.js", "TypeScript", "Product marketing", "Waitlist"],
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "Product marketing",
+          "Waitlist"
+        ],
         "year": "2026",
         "highlight": "Fintech product",
         "category": "Fintech",
@@ -305,7 +289,8 @@
           "Base lista para pricing founder y launch May 2026"
         ],
         "webUrl": "https://www.fintru.co",
-        "repoUrl": "https://github.com/JhoanBurbano/fintru"
+        "repoUrl": "https://github.com/JhoanBurbano/fintru",
+        "spotlight": true
       },
       {
         "slug": "caucana-taekwondo",
@@ -316,7 +301,12 @@
           "Estructura por trayectoria, planes de entrenamiento, logros y CTA claros — UX orientada a padres y adultos que deciden pagar mensualidad.",
           "Entrega freelance end-to-end: contenido, UI y deploy con dominio propio."
         ],
-        "stack": ["Vite", "TypeScript", "SEO local", "Conversion"],
+        "stack": [
+          "Vite",
+          "TypeScript",
+          "SEO local",
+          "Conversion"
+        ],
         "year": "2025 — 2026",
         "highlight": "Client delivery",
         "category": "Client",
@@ -342,7 +332,12 @@
           "Backend con Clean/Hexagonal (.NET o APIs asociadas) y cliente TypeScript de alto volumen de lógica de UI.",
           "Conecta con la experiencia de growth inmobiliario: módulos de ventas y aprendizaje pueden crecer sobre la misma base."
         ],
-        "stack": ["Next.js", "TypeScript", "API", "Real estate"],
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "API",
+          "Real estate"
+        ],
         "year": "2025",
         "highlight": "Product + platform",
         "category": "Product",
@@ -368,7 +363,11 @@
           "Narrativa B2C con prueba social y pasos claros: perfil → explorar → unirse → registrar resultados.",
           "Caso de product marketing alineado a app mobile en roadmap."
         ],
-        "stack": ["Next.js", "TypeScript", "Product landing"],
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "Product landing"
+        ],
         "year": "2025",
         "highlight": "Product marketing",
         "category": "Product",
@@ -393,7 +392,11 @@
           "Landing de captación dual (negocio / inversión) con métricas y demo CTA.",
           "Enfoque product engineer: mensaje de unit economics local antes de over-engineering de routing."
         ],
-        "stack": ["Next.js", "TypeScript", "Marketplace narrative"],
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "Marketplace narrative"
+        ],
         "year": "2025",
         "highlight": "Logistics product",
         "category": "Product",
@@ -418,7 +421,12 @@
           "El case documenta decisiones de alcance: qué se construye primero para validar aprendizaje, no solo features.",
           "Puente entre experiencia “MVP launch” del CV y evidencia navegable."
         ],
-        "stack": ["Vue", "TypeScript", "EdTech", "Case study"],
+        "stack": [
+          "Vue",
+          "TypeScript",
+          "EdTech",
+          "Case study"
+        ],
         "year": "2025",
         "highlight": "MVP launch",
         "category": "Case",
@@ -443,7 +451,12 @@
           "Refactors por vertical slices, regresión focalizada y alineación con riesgo/ops.",
           "Production-first: trazabilidad de decisiones y UX que reduce abandono sin ocultar costos."
         ],
-        "stack": ["React", "Fintech", "Testing", "Refactors"],
+        "stack": [
+          "React",
+          "Fintech",
+          "Testing",
+          "Refactors"
+        ],
         "year": "2022 — 2023",
         "highlight": "Fintech",
         "category": "Fintech",
@@ -457,7 +470,8 @@
           "Colaboración directa con riesgo y operaciones"
         ],
         "webUrl": "https://aplazo.mx",
-        "appUrl": "https://apps.apple.com/mx/app/aplazo/id1556818302"
+        "appUrl": "https://apps.apple.com/mx/app/aplazo/id1556818302",
+        "spotlight": true
       },
       {
         "slug": "portfolio-cv-next",
@@ -468,7 +482,12 @@
           "CV en pantalla + PDF oficial; analytics de eventos clave con Microsoft Clarity.",
           "Microinteracciones y tema claro/oscuro sin sacrificar performance."
         ],
-        "stack": ["Next.js", "Framer Motion", "Tailwind", "Clarity"],
+        "stack": [
+          "Next.js",
+          "Framer Motion",
+          "Tailwind",
+          "Clarity"
+        ],
         "year": "2026",
         "highlight": "Este sitio",
         "category": "Brand",
@@ -495,7 +514,11 @@
           "Validación post-pago y seguimiento sin duplicar órdenes ante doble tap.",
           "Liderazgo: boundaries por feature y reviews orientadas a riesgo."
         ],
-        "stack": ["React Native", "Pagos", "Observabilidad"],
+        "stack": [
+          "React Native",
+          "Pagos",
+          "Observabilidad"
+        ],
         "year": "2024 — Present",
         "highlight": "Team Lead",
         "category": "Mobile",
@@ -510,7 +533,8 @@
           "Patrones de equipo reutilizables"
         ],
         "webUrl": "https://www.cheaf.com",
-        "appUrl": "https://apps.apple.com/co/app/cheaf-salva-comida-y-ahorra/id1527621516"
+        "appUrl": "https://apps.apple.com/co/app/cheaf-salva-comida-y-ahorra/id1527621516",
+        "spotlight": true
       },
       {
         "slug": "operaciones-data-driven",
@@ -521,7 +545,11 @@
           "De spreadsheet a producto: estados finitos y guardado progresivo.",
           "AI-assisted delivery en refactors; review humana en persistencia/permisos."
         ],
-        "stack": ["React Native", "TypeScript", "Offline-first patterns"],
+        "stack": [
+          "React Native",
+          "TypeScript",
+          "Offline-first patterns"
+        ],
         "year": "2024 — 2025",
         "highlight": "Team Lead",
         "category": "Mobile",
@@ -533,7 +561,8 @@
           "Flujos operativos más confiables",
           "Mejor rendimiento en listas grandes",
           "Traducción clara de requisitos ambiguos a estados"
-        ]
+        ],
+        "spotlight": true
       }
     ]
   },
@@ -549,8 +578,8 @@
         "Integración liviana (email, webhook, Sheet/CRM según alcance acordado)",
         "Deploy + handover + 1 ronda de ajustes UI/copy"
       ],
-      "startingPrice": "USD 600",
-      "priceNote": "USD o equivalente COP (TRM del día) · IVA según aplique.",
+      "startingPrice": "USD 1.8k – 3.5k",
+      "priceNote": "Rango cerrado tras una llamada de 30 min. USD o COP a TRM del día · IVA según aplique.",
       "disclaimer": "Precio inicial orientativo. El presupuesto cerrado depende de número de páginas/secciones, CMS, multi-idioma, animación, integraciones (CRM, analytics, pagos), compliance y plazos. Sin cobro hasta aprobación escrita de alcance y propuesta.",
       "requestServiceId": "landing-leads-pack",
       "ctaLabel": "Cotizar pack web"
@@ -566,8 +595,8 @@
         "Autenticación, navegación y al menos un flujo transaccional o core acordado",
         "Builds, entorno de staging y checklist de salida a producción"
       ],
-      "startingPrice": "USD 2.500",
-      "priceNote": "Alcance MVP acotado; extensiones por fases.",
+      "startingPrice": "USD 8k – 18k",
+      "priceNote": "Rango cerrado tras una llamada de 30 min. USD o COP a TRM del día · IVA según aplique.",
       "disclaimer": "El precio inicial aplica a un MVP acotado (número de pantallas y flujos fijados en propuesta). Cambios de alcance, integraciones complejas, offline-first, tiendas o pagos in-app cotizan aparte. Requiere firma de alcance antes de desarrollo facturable.",
       "requestServiceId": "cross-platform-design-pack",
       "ctaLabel": "Cotizar app cross-platform"
@@ -583,8 +612,8 @@
         "Documentación corta de mantenimiento y re-ejecución",
         "Sesión de handover y ventana de soporte acotada post-go-live"
       ],
-      "startingPrice": "USD 950",
-      "priceNote": "Por flujo o paquete de hasta N pasos acordados.",
+      "startingPrice": "USD 3k – 7k",
+      "priceNote": "Rango cerrado tras una llamada de 30 min. USD o COP a TRM del día · IVA según aplique.",
       "disclaimer": "Precio guía por paquete de complejidad media-baja. Volúmenes altos, SLAs estrictos, compliance sectorial o multi-tenant requieren cotización dedicada. Límites de volumen y reintentos se fijan por escrito.",
       "requestServiceId": "automation-pack",
       "ctaLabel": "Cotizar automatización"
@@ -595,49 +624,81 @@
       "id": "landing-leads-pack",
       "title": "Pack: Web + contacto / leads",
       "description": "Sitio o landing con captación y entrega de leads.",
-      "deliverables": ["Next.js", "SEO base", "Formulario + integración", "Deploy"],
-      "priceHint": "USD 600 · cotización"
+      "deliverables": [
+        "Next.js",
+        "SEO base",
+        "Formulario + integración",
+        "Deploy"
+      ],
+      "priceHint": "USD 1.8k – 3.5k · cotización"
     },
     {
       "id": "cross-platform-design-pack",
       "title": "Pack: App web + mobile cross-platform",
       "description": "Producto digital unificado en web y app móvil.",
-      "deliverables": ["React Native", "Web alineada", "UI system", "MVP acotado"],
-      "priceHint": "USD 2.500 · cotización"
+      "deliverables": [
+        "React Native",
+        "Web alineada",
+        "UI system",
+        "MVP acotado"
+      ],
+      "priceHint": "USD 8k – 18k · cotización"
     },
     {
       "id": "automation-pack",
       "title": "Pack: Automatizaciones",
       "description": "Flujos entre herramientas, webhooks y operaciones repetibles.",
-      "deliverables": ["n8n/Make/Node", "Webhooks", "Docs", "Handover"],
-      "priceHint": "USD 950 · cotización"
+      "deliverables": [
+        "n8n/Make/Node",
+        "Webhooks",
+        "Docs",
+        "Handover"
+      ],
+      "priceHint": "USD 3k – 7k · cotización"
     },
     {
       "id": "mobile-product",
       "title": "Producto mobile (React Native)",
       "description": "Diseño e implementación de apps con flujos transaccionales, modularización y calidad de producción.",
-      "deliverables": ["Arquitectura", "Features críticos", "Code review", "CI"],
+      "deliverables": [
+        "Arquitectura",
+        "Features críticos",
+        "Code review",
+        "CI"
+      ],
       "priceHint": "Proyecto / retainer"
     },
     {
       "id": "web-platform",
       "title": "Plataformas web (Next.js)",
       "description": "SPAs y SSR con SEO, performance y sistemas de diseño coherentes.",
-      "deliverables": ["Next.js App Router", "Integraciones API", "Deploy"],
+      "deliverables": [
+        "Next.js App Router",
+        "Integraciones API",
+        "Deploy"
+      ],
       "priceHint": "Por alcance"
     },
     {
       "id": "ai-workflows",
       "title": "AI workflows & asistencia a equipos",
       "description": "Orquestación práctica de agentes, prompts y automatización de desarrollo sin sacrificar control humano.",
-      "deliverables": ["Playbooks", "Plantillas", "Integración con tu stack"],
+      "deliverables": [
+        "Playbooks",
+        "Plantillas",
+        "Integración con tu stack"
+      ],
       "priceHint": "Workshop + implementación"
     },
     {
       "id": "fintech-integration",
       "title": "Integraciones fintech",
       "description": "Stripe, MercadoPago, Kushki, Conekta y validación de transacciones en flujos reales.",
-      "deliverables": ["Checkout", "Webhooks", "Edge cases"],
+      "deliverables": [
+        "Checkout",
+        "Webhooks",
+        "Edge cases"
+      ],
       "priceHint": "Por integración"
     }
   ],
@@ -647,15 +708,31 @@
     "Public Accounting (in progress) — UNAD"
   ],
   "languages": [
-    { "name": "Spanish", "level": "Native" },
-    { "name": "English", "level": "Intermediate (working towards C1)" }
+    {
+      "name": "Spanish",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Intermediate (working towards C1)"
+    }
   ],
   "footerLinks": [
-    { "label": "Portfolio", "url": "https://www.jsburbano.dev" },
-    { "label": "LinkedIn", "url": "https://linkedin.com/in/jsburbano" },
-    { "label": "GitHub", "url": "https://github.com/jsburbano" }
+    {
+      "label": "Portfolio",
+      "url": "https://www.jsburbano.dev"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/jsburbano"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/jsburbano"
+    }
   ],
   "cvPdf": {
     "url": "https://32rtv1xoeq3me6nj.public.blob.vercel-storage.com/jhoan-burbano-cv.pdf"
-  }
+  },
+  "testimonials": []
 }

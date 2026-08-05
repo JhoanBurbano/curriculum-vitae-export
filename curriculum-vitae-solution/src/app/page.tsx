@@ -4,6 +4,7 @@ import { HeroHome } from "@/components/hero-home";
 import { ExperienceTimeline } from "@/components/experience-timeline";
 import { ProjectGrid } from "@/components/project-grid";
 import { PostCard } from "@/components/blog/post-card";
+import { Testimonials } from "@/components/testimonials";
 import { getCv } from "@/lib/cv";
 import { getAllProjects } from "@/lib/projects";
 import { getAllPosts } from "@/lib/blog";
@@ -67,6 +68,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <Testimonials items={c.testimonials} />
 
       <section className="border-t border-[var(--border)] bg-[var(--surface)] px-4 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">

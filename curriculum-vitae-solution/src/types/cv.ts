@@ -36,6 +36,18 @@ export interface CvProject {
   featured?: boolean;
   /** Tag de categoría en UI (SaaS, Fintech, Client, Product…) */
   category?: string;
+  /**
+   * Caso de portada. Solo los `spotlight` se muestran como card completa; el
+   * resto pasa a una lista compacta. Once cards sin métricas bajan el promedio
+   * en vez de sumar volumen: cinco casos fuertes venden más que once tibios.
+   */
+  spotlight?: boolean;
+  /**
+   * Cifras del caso. Vacío a propósito: no se inventan métricas de cliente.
+   * En cuanto tengas los números reales, esto es lo primero que un comprador lee.
+   * Ej.: { value: "-38%", label: "tiempo de onboarding" }
+   */
+  impact?: { value: string; label: string }[];
 }
 
 export interface CvService {
@@ -52,7 +64,7 @@ export interface ServicePack {
   title: string;
   description: string;
   includes: string[];
-  /** Ej. "Desde USD 1.200" */
+  /** Ej. "USD 4k – 9k". Un rango califica; un "desde" barato atrae al comprador equivocado. */
   startingPrice: string;
   /** Línea bajo el precio (IVA, TRM, etc.) */
   priceNote?: string;
@@ -65,6 +77,16 @@ export interface ServicePack {
 
 /** Esquina del hero: qué mostrar además de (o en lugar de) años de experiencia */
 export type HeroAsideVariant = "years" | "stat" | "rotate" | "projects";
+
+/** Testimonio de cliente. Vacío hasta que existan de verdad: no se inventan. */
+export interface CvTestimonial {
+  quote: string;
+  author: string;
+  /** Cargo y empresa. Sin esto el testimonio no tiene fuerza. */
+  role: string;
+  /** Opcional: enlace a LinkedIn o al proyecto, para que sea verificable. */
+  url?: string;
+}
 
 export interface HeroAsideConfig {
   variant: HeroAsideVariant;
@@ -83,12 +105,26 @@ export interface CvCopy {
   /** Si falta, el hero usa variant "years" desde el resumen */
   heroAside?: HeroAsideConfig;
   header: {
+    /** Línea de rol. Va al CV, al JSON-LD y al footer: describe QUÉ eres. */
     subtitle: string;
+    /**
+     * Promesa comercial del hero: a quién ayudas y a qué resultado. Distinta del
+     * `subtitle` a propósito — una lista de etiquetas separadas por barras dice
+     * qué eres, no qué problema resuelves, y es lo que decide si un comprador
+     * sigue leyendo.
+     */
+    promise?: string;
     nameLine1: string;
     nameLine2: string;
     image: string;
     contactLine: string;
     contactLinks: Array<{ label: string; url: string }>;
+    /**
+     * Enlace de agenda (Cal.com, Calendly…). Si está vacío, la UI no muestra el
+     * botón. Un formulario es el escalón más alto del funnel: agendar convierte
+     * mucho mejor porque cuesta 15 segundos.
+     */
+    bookingUrl?: string;
   };
   professionalSummary: string;
   /** Soft skills (CV y secciones que lean este campo) */
@@ -110,6 +146,8 @@ export interface CvCopy {
   services: CvService[];
   /** Packs destacados (web, cross-platform, automatización) */
   servicePacks: ServicePack[];
+  /** Prueba social. Mientras esté vacío, la sección no se renderiza. */
+  testimonials?: CvTestimonial[];
   footerLinks: Array<{ label: string; url: string }>;
   education: string[];
   languages: Array<{ name: string; level: string }>;

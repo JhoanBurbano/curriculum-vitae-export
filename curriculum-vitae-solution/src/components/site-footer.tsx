@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ClarityTrackedLink } from "@/components/clarity-tracked-link";
 import { getCv } from "@/lib/cv";
 
@@ -12,7 +13,11 @@ export function SiteFooter() {
           </p>
           <p className="mt-1 max-w-md text-sm text-[var(--muted)]">{c.header.subtitle}</p>
         </div>
-        <div className="flex flex-wrap gap-4 text-sm">
+        <div className="flex flex-wrap items-center gap-4 text-sm">
+          {/* El CV vive aquí, no en el nav: sigue accesible sin competir con la oferta. */}
+          <Link href="/cv" className="text-[var(--muted)] underline-offset-4 transition hover:text-[var(--accent-ink)] hover:underline">
+            CV
+          </Link>
           {c.footerLinks.map((f) => (
             <ClarityTrackedLink
               key={f.url}

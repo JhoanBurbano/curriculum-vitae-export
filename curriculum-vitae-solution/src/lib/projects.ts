@@ -33,3 +33,21 @@ export function getRelatedProjects(cv: CvCopy, slug: string, limit = 2): Project
     .sort((a, b) => b.score - a.score);
   return scored.slice(0, limit).map((s) => s.p);
 }
+
+/**
+ * Casos de portada. Se muestran como card completa; el resto pasa a una lista
+ * compacta en /projects. Once cards sin métricas bajan el promedio en vez de
+ * sumar volumen, y varias de ellas eran landings propias, no trabajo de cliente.
+ * Ninguna URL se pierde: los casos secundarios siguen teniendo su página.
+ */
+export function getSpotlightProjects(cv: CvCopy): ProjectWithKind[] {
+  const all = getAllProjects(cv);
+  const spotlight = all.filter((p) => p.spotlight);
+  return spotlight.length > 0 ? spotlight : all.filter((p) => p.featured);
+}
+
+/** El resto: se listan compactos, sin card. */
+export function getSecondaryProjects(cv: CvCopy): ProjectWithKind[] {
+  const spotlight = new Set(getSpotlightProjects(cv).map((p) => p.slug));
+  return getAllProjects(cv).filter((p) => !spotlight.has(p.slug));
+}

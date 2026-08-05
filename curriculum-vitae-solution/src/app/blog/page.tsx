@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageMotion } from "@/providers/page-motion";
 import { BlogIndex } from "@/components/blog/blog-index";
+import { SubscribeForm } from "@/components/blog/subscribe-form";
 import { getAllPosts, getTopicsInUse } from "@/lib/blog";
 import { Eyebrow } from "@/components/ui/eyebrow";
 
@@ -45,6 +46,9 @@ export default function BlogPage() {
 
       <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
         <BlogIndex posts={posts} topics={topics} />
+        <div className="mt-16">
+          <SubscribeForm source="blog-index" />
+        </div>
       </div>
     </PageMotion>
   );

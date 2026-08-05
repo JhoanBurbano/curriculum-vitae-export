@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { PageMotion } from "@/providers/page-motion";
 import { PostBody } from "@/components/blog/post-body";
 import { PostCard } from "@/components/blog/post-card";
+import { SubscribeForm } from "@/components/blog/subscribe-form";
 import { getCv } from "@/lib/cv";
 import { formatPostDate, getAllPosts, getPostBySlug, getReadingMinutes, getRelatedPosts } from "@/lib/blog";
 import { TOPIC_LABELS } from "@/types/blog";
@@ -126,13 +127,29 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
             Trabajo con equipos que necesitan llevar esto a producción, no solo probarlo. Cuéntame el caso y te digo qué haría.
           </p>
-          <Link
-            href="/request-service"
-            className="mt-5 inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-[var(--accent-fg)] transition hover:brightness-110"
-          >
-            Solicitar servicio
-          </Link>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link
+              href="/request-service"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-[var(--accent-fg)] transition hover:brightness-110"
+            >
+              Solicitar servicio
+            </Link>
+            {c.header.bookingUrl && (
+              <a
+                href={c.header.bookingUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg)] px-6 py-3 text-sm font-semibold transition hover:border-[var(--accent)]"
+              >
+                Agendar 30 min
+              </a>
+            )}
+          </div>
         </section>
+
+        <div className="mt-14">
+          <SubscribeForm source={`post:${post.slug}`} />
+        </div>
 
         {related.length > 0 && (
           <section className="mt-14 border-t border-[var(--border)] pt-10">

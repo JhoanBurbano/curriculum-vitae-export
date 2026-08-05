@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { PageMotion } from "@/providers/page-motion";
 import { ProjectsShowcase } from "@/components/projects-showcase";
 import { getCv } from "@/lib/cv";
-import { getAllProjects } from "@/lib/projects";
+import { getSecondaryProjects, getSpotlightProjects } from "@/lib/projects";
+import { SecondaryProjectList } from "@/components/secondary-project-list";
 
 export const metadata: Metadata = {
   title: "Proyectos",
@@ -10,7 +11,9 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  const projects = getAllProjects(getCv());
+  const cv = getCv();
+  const projects = getSpotlightProjects(cv);
+  const secondary = getSecondaryProjects(cv);
   return (
     <PageMotion>
       <div className="relative overflow-hidden">
@@ -18,6 +21,7 @@ export default function ProjectsPage() {
         <div className="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-[var(--accent-2)]/15 blur-3xl" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
           <ProjectsShowcase projects={projects} />
+          <SecondaryProjectList projects={secondary} />
         </div>
       </div>
     </PageMotion>

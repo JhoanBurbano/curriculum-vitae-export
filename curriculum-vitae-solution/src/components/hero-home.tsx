@@ -28,8 +28,18 @@ export function HeroHome({ data }: { data: CvCopy }) {
             <span className="block text-[var(--accent-ink)]">{data.header.nameLine2}</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-6 max-w-xl text-base text-[var(--muted)] sm:text-lg">
-            {data.header.subtitle}
+            {data.header.promise ?? data.header.subtitle}
           </motion.p>
+          {data.header.promise && (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.24 }}
+              className="mt-3 text-sm font-medium text-[var(--fg)]"
+            >
+              {data.header.subtitle}
+            </motion.p>
+          )}
           <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.28 }} className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/request-service"
@@ -37,9 +47,19 @@ export function HeroHome({ data }: { data: CvCopy }) {
             >
               Solicitar servicio
             </Link>
-            <Link href="/cv" className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] px-6 py-3 text-sm font-semibold transition hover:border-[var(--accent)]">
-              Exportar CV
+            <Link href="/projects" className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] px-6 py-3 text-sm font-semibold transition hover:border-[var(--accent)]">
+              Ver casos
             </Link>
+            {data.header.bookingUrl && (
+              <a
+                href={data.header.bookingUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--accent)]/40 bg-transparent px-6 py-3 text-sm font-semibold transition hover:border-[var(--accent)]"
+              >
+                Agendar 30 min
+              </a>
+            )}
           </motion.div>
         </div>
 

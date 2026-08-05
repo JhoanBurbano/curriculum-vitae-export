@@ -133,6 +133,22 @@ export function ProjectDetailView({
           )}
           {project.outcomes && project.outcomes.length > 0 && (
             <SectionBlock eyebrow="04" title="Resultados" delay={0.2}>
+              {/* Las cifras van primero: es lo único de esta página que un comprador
+                  lee de verdad. Se renderiza solo si el caso tiene números reales —
+                  ver el campo `impact` en cv-copy.json. */}
+              {project.impact && project.impact.length > 0 && (
+                <dl className="mb-6 grid gap-4 sm:grid-cols-3">
+                  {project.impact.map((m) => (
+                    <div key={m.label} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
+                      <dt className="sr-only">{m.label}</dt>
+                      <dd className="font-[family-name:var(--font-display)] text-3xl font-extrabold leading-none text-[var(--accent-ink)]">
+                        {m.value}
+                      </dd>
+                      <p className="mt-2 text-xs leading-snug text-[var(--muted)]">{m.label}</p>
+                    </div>
+                  ))}
+                </dl>
+              )}
               <ul className="space-y-3">
                 {project.outcomes.map((o) => (
                   <li key={o} className="flex gap-3">
