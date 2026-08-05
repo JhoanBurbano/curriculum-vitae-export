@@ -45,7 +45,7 @@
       }
     ],
     "promise": "Llevo sistemas con IA de la demo a producción, en productos que mueven dinero real: pagos, riesgo y operaciones. 8+ años construyendo, no opinando.",
-    "bookingUrl": ""
+    "bookingUrl": "https://calendly.com/jsburbano/30min"
   },
   "professionalSummary": "AI Product Engineer with 8+ years of experience building real-world products across mobile, frontend, and backend systems. Specialized in prompt engineering, multi-agent orchestration, and AI-powered product execution. Strong fintech background integrating payment systems and handling transactional flows in production. Focused on turning AI capabilities into scalable, reliable, and production-ready systems.",
   "softSkills": [
@@ -578,8 +578,8 @@
         "Integración liviana (email, webhook, Sheet/CRM según alcance acordado)",
         "Deploy + handover + 1 ronda de ajustes UI/copy"
       ],
-      "startingPrice": "USD 1.8k – 3.5k",
-      "priceNote": "Rango cerrado tras una llamada de 30 min. USD o COP a TRM del día · IVA según aplique.",
+      "startingPrice": "USD 2k – 4k",
+      "priceNote": "Rango cerrado en la llamada de 30 min. USD o COP a TRM del día · IVA según aplique.",
       "disclaimer": "Precio inicial orientativo. El presupuesto cerrado depende de número de páginas/secciones, CMS, multi-idioma, animación, integraciones (CRM, analytics, pagos), compliance y plazos. Sin cobro hasta aprobación escrita de alcance y propuesta.",
       "requestServiceId": "landing-leads-pack",
       "ctaLabel": "Cotizar pack web"
@@ -595,8 +595,8 @@
         "Autenticación, navegación y al menos un flujo transaccional o core acordado",
         "Builds, entorno de staging y checklist de salida a producción"
       ],
-      "startingPrice": "USD 8k – 18k",
-      "priceNote": "Rango cerrado tras una llamada de 30 min. USD o COP a TRM del día · IVA según aplique.",
+      "startingPrice": "USD 9k – 20k",
+      "priceNote": "Rango cerrado en la llamada de 30 min. USD o COP a TRM del día · IVA según aplique.",
       "disclaimer": "El precio inicial aplica a un MVP acotado (número de pantallas y flujos fijados en propuesta). Cambios de alcance, integraciones complejas, offline-first, tiendas o pagos in-app cotizan aparte. Requiere firma de alcance antes de desarrollo facturable.",
       "requestServiceId": "cross-platform-design-pack",
       "ctaLabel": "Cotizar app cross-platform"
@@ -612,8 +612,8 @@
         "Documentación corta de mantenimiento y re-ejecución",
         "Sesión de handover y ventana de soporte acotada post-go-live"
       ],
-      "startingPrice": "USD 3k – 7k",
-      "priceNote": "Rango cerrado tras una llamada de 30 min. USD o COP a TRM del día · IVA según aplique.",
+      "startingPrice": "USD 4k – 9k",
+      "priceNote": "Rango cerrado en la llamada de 30 min. USD o COP a TRM del día · IVA según aplique.",
       "disclaimer": "Precio guía por paquete de complejidad media-baja. Volúmenes altos, SLAs estrictos, compliance sectorial o multi-tenant requieren cotización dedicada. Límites de volumen y reintentos se fijan por escrito.",
       "requestServiceId": "automation-pack",
       "ctaLabel": "Cotizar automatización"
@@ -630,7 +630,7 @@
         "Formulario + integración",
         "Deploy"
       ],
-      "priceHint": "USD 1.8k – 3.5k · cotización"
+      "priceHint": "USD 2k – 4k · cotización"
     },
     {
       "id": "cross-platform-design-pack",
@@ -642,7 +642,7 @@
         "UI system",
         "MVP acotado"
       ],
-      "priceHint": "USD 8k – 18k · cotización"
+      "priceHint": "USD 9k – 20k · cotización"
     },
     {
       "id": "automation-pack",
@@ -654,7 +654,7 @@
         "Docs",
         "Handover"
       ],
-      "priceHint": "USD 3k – 7k · cotización"
+      "priceHint": "USD 4k – 9k · cotización"
     },
     {
       "id": "mobile-product",
@@ -699,7 +699,7 @@
         "Webhooks",
         "Edge cases"
       ],
-      "priceHint": "Por integración"
+      "priceHint": "USD 8k – 25k por integración"
     }
   ],
   "education": [

@@ -5,6 +5,7 @@ import { ExperienceTimeline } from "@/components/experience-timeline";
 import { ProjectGrid } from "@/components/project-grid";
 import { PostCard } from "@/components/blog/post-card";
 import { Testimonials } from "@/components/testimonials";
+import { CareerStats } from "@/components/career-stats";
 import { getCv } from "@/lib/cv";
 import { getAllProjects } from "@/lib/projects";
 import { getAllPosts } from "@/lib/blog";
@@ -21,6 +22,8 @@ export default function HomePage() {
   return (
     <PageMotion>
       <HeroHome data={c} />
+
+      <CareerStats cv={c} />
 
       <section className="mx-auto max-w-6xl border-b border-[var(--border)] px-4 py-16 sm:px-6 sm:py-20">
         <div className="max-w-3xl">
